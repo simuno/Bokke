@@ -90,7 +90,7 @@
     sel: null,               // {type:'scene'|'place'|'person', id}
     tab: 'card',
     person: null,            // filtr postaci
-    abbey: false,
+    plan: null,              // otwarty plan: opactwo | kotlina | wawrzyniec
     fresh: new Set()         // świeżo odsłonięte sceny (animacja „atramentu”)
   };
   const visible = (s) => s.num <= state.progress;
@@ -106,8 +106,10 @@
     return null;
   }
   function inside(pid, rootId) { return ancestors(pid).some((p) => p.id === rootId); }
-  const DETAIL = ['opactwo', 'ostrow', 'wroclaw', 'slask'];
+  const PLANS = Object.keys(D.sheets).filter((k) => D.sheets[k].plan);
+  const planOpen = (id) => !D.sheets[id].from || chByid[D.sheets[id].from].num <= state.progress;
   function bestSheet(pid) {
+    const DETAIL = ['opactwo', 'wawrzyniec', 'kotlina', 'ostrow', 'wroclaw', 'slask'].filter((s) => !D.sheets[s].plan || planOpen(s));
     for (const s of DETAIL) { const q = posOn(pid, s); if (q && q.id === pid) return s; }
     for (const s of DETAIL) if (posOn(pid, s)) return s;
     return 'slask';
@@ -230,36 +232,35 @@
     return null;
   }
 
-  /* ---------- plan opactwa ---------- */
-  let abbeyMap = null; let abbeyLayer = null;
-  const AB = SH.opactwo;
+  /* ---------- plany (opactwo na Piasku, Kotlina Cicha, opactwo św. Wawrzyńca) ---------- */
+  let planMap = null; let planLayer = null; let planImg = null;
   const abLatLng = (x, y) => L.latLng(-y, x);
-  function ensureAbbey() {
-    if (abbeyMap) return;
-    abbeyMap = L.map('abbey', { crs: L.CRS.Simple, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: -3, maxZoom: 1.5, attributionControl: false, zoomControl: false });
-    L.control.attribution({ position: 'bottomright', prefix: false }).addAttribution('Plan: Szymon Urbanowski').addTo(abbeyMap);
-    L.control.zoom({ position: 'bottomright', zoomInTitle: 'Przybliż', zoomOutTitle: 'Oddal' }).addTo(abbeyMap);
-    const b = [[-AB.size[1], 0], [0, AB.size[0]]];
-    L.imageOverlay(AB.img, b, { className: 'sheet' }).addTo(abbeyMap);
-    abbeyMap.setMaxBounds(L.latLngBounds(b).pad(0.1));
-    abbeyLayer = L.layerGroup().addTo(abbeyMap);
-    abbeyMap.fitBounds(b);
-  }
-  function setAbbey(on, focus) {
-    state.abbey = on;
-    $('#abbey').hidden = !on;
-    if (on) {
-      ensureAbbey();
-      abbeyMap.invalidateSize();
-      if (focus) {
-        const q = posOn(focus, 'opactwo');
-        if (q) abbeyMap.flyTo(abLatLng(q.x, q.y), Math.max(abbeyMap.getZoom(), -0.75), { duration: 0.6 });
-      } else {
-        abbeyMap.fitBounds([[-AB.size[1], 0], [0, AB.size[0]]]);
+  const planBounds = (id) => [[-SH[id].size[1], 0], [0, SH[id].size[0]]];
+  function setPlan(id, focus) {
+    state.plan = id;
+    $('#abbey').hidden = !id;
+    if (id) {
+      if (!planMap) {
+        planMap = L.map('abbey', { crs: L.CRS.Simple, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: -3, maxZoom: 1.5, attributionControl: false, zoomControl: false });
+        L.control.attribution({ position: 'bottomright', prefix: false }).addAttribution('Plan: Szymon Urbanowski').addTo(planMap);
+        L.control.zoom({ position: 'bottomright', zoomInTitle: 'Przybliż', zoomOutTitle: 'Oddal' }).addTo(planMap);
+        planLayer = L.layerGroup().addTo(planMap);
       }
+      planMap.invalidateSize();
+      if (!planImg || planImg._plan !== id) {
+        if (planImg) planMap.removeLayer(planImg);
+        planImg = L.imageOverlay(SH[id].img, planBounds(id), { className: 'sheet' }).addTo(planMap);
+        planImg._plan = id;
+        planMap.setMaxBounds(L.latLngBounds(planBounds(id)).pad(0.15));
+        planMap.fitBounds(planBounds(id));
+      }
+      const q = focus && posOn(focus, id);
+      if (q) planMap.flyTo(abLatLng(q.cx != null ? q.cx : q.x, q.cy != null ? q.cy : q.y), Math.max(planMap.getZoom(), -0.75), { duration: 0.6 });
+      else if (!focus) planMap.fitBounds(planBounds(id));
     }
     renderMarkers(); syncSheetButtons();
   }
+  const setAbbey = (on, focus) => setPlan(on ? 'opactwo' : null, focus);
 
   /* ---------- znaczniki ---------- */
   const sealIcon = (count, cls) => L.divIcon({ className: 'seal-icon', iconSize: [0, 0], html: `<div class="seal ${cls || ''}">${count}</div>` });
@@ -278,7 +279,8 @@
   function groupScenes(level) {
     const groups = new Map();
     for (const s of visScenes()) {
-      const d = level === 'opactwo' ? (inside(s.place, 'piasek') ? { sheet: 'opactwo', ...(posOn(s.place, 'opactwo') || {}) } : null) : displayFor(s.place, level);
+      const q = SH[level] && SH[level].plan ? posOn(s.place, level) : null;
+      const d = SH[level] && SH[level].plan ? (q ? { sheet: level, ...q } : null) : displayFor(s.place, level);
       if (!d || d.x == null) continue;
       const key = d.sheet + ':' + d.id;
       if (!groups.has(key)) groups.set(key, { ...d, scenes: [] });
@@ -289,7 +291,7 @@
 
   function renderMarkers() {
     markLayer.clearLayers(); walkLayer.clearLayers();
-    if (abbeyLayer) abbeyLayer.clearLayers();
+    if (planLayer) planLayer.clearLayers();
     const level = geoLevel();
     const selIds = selectedPlaceIds();
     const selScene = state.sel && state.sel.type === 'scene' ? scById[state.sel.id] : null;
@@ -334,25 +336,27 @@
       }
     }
     // droga w obrębie wybranej sceny
-    if (selScene && selScene.path && selScene.path.length > 1 && !state.abbey) {
+    if (selScene && selScene.path && selScene.path.length > 1 && !state.plan) {
       const pts = selScene.path.map((pid) => displayFor(pid, level)).filter(Boolean).map((d) => pxToLatLng(d.sheet, d.cx != null && d.sheet === 'wroclaw' ? d.cx : d.x, d.cx != null && d.sheet === 'wroclaw' ? d.cy : d.y));
       const uniq = pts.filter((p, i) => i === 0 || !p.equals(pts[i - 1]));
       if (uniq.length > 1) L.polyline(uniq, { className: 'walk', weight: 2.5, dashArray: '2 7', lineCap: 'round', interactive: false }).addTo(walkLayer);
     }
     renderRoutes(level);
-    if (state.abbey) renderAbbeyMarkers(selIds);
+    if (state.plan) renderPlanMarkers(state.plan, selIds);
     updateCaption();
   }
 
   function tipFor(pid, n) {
     const p = P[pid] || {};
-    const num = p.sheets && p.sheets.wroclaw && p.sheets.wroclaw.n ? `${p.sheets.wroclaw.n}. ` : '';
+    const sh = p.sheets || {}; const lg = (state.plan && sh[state.plan]) || sh.wroclaw;
+    const num = lg && lg.n ? `${lg.n}. ` : '';
     const scenes = n ? ` · ${n} ${n === 1 ? 'scena' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'sceny' : 'scen')}` : '';
     return `${num}${p.name || pid}${scenes}`;
   }
 
-  function renderAbbeyMarkers(selIds) {
-    const groups = groupScenes('opactwo');
+  function renderPlanMarkers(plan, selIds) {
+    const abbeyLayer = planLayer;
+    const groups = groupScenes(plan);
     const done = new Set();
     for (const g of groups.values()) {
       const n = g.scenes.length;
@@ -375,7 +379,7 @@
       done.add(g.id);
     }
     for (const [pid, p] of Object.entries(P)) {
-      const a = p.sheets && p.sheets.opactwo;
+      const a = p.sheets && p.sheets[plan];
       if (!a || a.cx == null || done.has(pid)) continue;
       L.circle(abLatLng(a.cx, a.cy), { radius: (a.r || 30) + 2, className: 'ring', weight: 3, opacity: 0, fill: true, fillOpacity: 0 })
         .on('click', () => selectPlace(pid, { fly: false }))
@@ -404,25 +408,28 @@
 
   function updateCaption() {
     const cap = $('#caption');
-    const lv = state.abbey ? 'opactwo' : geoLevel();
+    const lv = state.plan || geoLevel();
     cap.replaceChildren(h('b', null, SH[lv].title), ' ', SH[lv].subtitle || '');
   }
 
   function syncSheetButtons() {
-    const lv = state.abbey ? 'opactwo' : geoLevel();
-    document.querySelectorAll('#sheets button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.sheet === lv)));
+    const lv = state.plan || geoLevel();
+    document.querySelectorAll('#sheets button').forEach((b) => {
+      b.setAttribute('aria-pressed', String(b.dataset.sheet === lv));
+      b.hidden = !!(SH[b.dataset.sheet] && SH[b.dataset.sheet].plan && !planOpen(b.dataset.sheet));
+    });
   }
 
   function flyToSheet(id) {
-    if (id === 'opactwo') { setAbbey(true); return; }
-    if (state.abbey) setAbbey(false);
+    if (SH[id].plan) { setPlan(id); return; }
+    if (state.plan) setPlan(null);
     map.flyToBounds(bounds(id), { padding: [10, 10], duration: 1.1 });
   }
   const ZOOM_FOR = { slask: 9.4, wroclaw: 15.3, ostrow: 17.3 };
   function flyToPlace(pid) {
     const s = bestSheet(pid);
-    if (s === 'opactwo') { setAbbey(true, pid); return; }
-    if (state.abbey) setAbbey(false);
+    if (SH[s].plan) { setPlan(s, pid); peek(); return; }
+    if (state.plan) setPlan(null);
     const q = posOn(pid, s);
     if (!q) return;
     const ll = pxToLatLng(s, q.cx != null && s === 'wroclaw' ? q.cx : q.x, q.cx != null && s === 'wroclaw' ? q.cy : q.y);
@@ -543,7 +550,7 @@
     const vis = visScenes(); const i = vis.findIndex((x) => x.id === s.id);
     const prev = vis[i - 1], next = vis[i + 1];
     const pl = P[s.place] || {};
-    const legend = pl.sheets && (pl.sheets.opactwo && pl.sheets.opactwo.n ? `plan opactwa, nr ${pl.sheets.opactwo.n}` : pl.sheets.wroclaw && pl.sheets.wroclaw.n ? `mapa Wrocławia, nr ${pl.sheets.wroclaw.n}` : '');
+    const lgd = legendOf(pl); const legend = lgd ? lgd.text : '';
     const people = (s.chars || []).filter((c) => PEOPLE[c]);
     return h('article', { class: 'card' },
       h('div', { class: 'crumb' }, h('span', { class: 'folio' }, s.id), h('span', null, ch.num ? `Rozdział ${ch.id} · ` : '', h('i', null, ch.title))),
@@ -578,19 +585,21 @@
     const leg = [];
     if (p.sheets) {
       if (p.sheets.wroclaw && p.sheets.wroclaw.n) leg.push(`mapa Wrocławia, nr ${p.sheets.wroclaw.n}`);
-      if (p.sheets.opactwo && p.sheets.opactwo.n) leg.push(`plan opactwa, nr ${p.sheets.opactwo.n}`);
+      for (const k of ['opactwo', 'wawrzyniec']) if (p.sheets[k] && p.sheets[k].n) leg.push(`${PLAN_LABEL[k]}, nr ${p.sheets[k].n}`);
+      if (p.sheets.kotlina && planOpen('kotlina')) leg.push(PLAN_LABEL.kotlina);
       if (p.sheets.ostrow) leg.push('mapa Ostrowa Tumskiego');
       if (p.sheets.slask && !leg.length) leg.push('mapa Śląska');
     }
     const parent = p.parent && P[p.parent];
-    const num = (p.sheets && ((p.sheets.opactwo && p.sheets.opactwo.n) || (p.sheets.wroclaw && p.sheets.wroclaw.n))) || null;
+    const num = (legendOf(p) || {}).n || null;
+    const plans = PLANS.filter((k) => planOpen(k) && ancestors(pid).concat(Object.values(P).filter((q) => q.parent === pid)).some((q) => q.sheets && q.sheets[k]));
     return h('article', { class: 'card' },
       h('div', { class: 'crumb' }, parent ? h('button', { type: 'button', class: 'linkish', onclick: () => selectPlace(parent.id, { fly: true }) }, parent.name) : h('span', null, 'Miejsce'), leg.length ? h('span', null, leg.join(' · ')) : null),
       h('h2', null, num ? h('span', { class: 'num' }, String(num)) : null, p.name),
       p.approx ? h('p', { class: 'note' }, h('b', null, 'Położenie umowne. '), p.approx === true ? 'Tego miejsca nie ma na mapie autora; znacznik stoi tam, gdzie wskazuje tekst.' : p.approx) : null,
       readable(p.desc).map((x) => h('p', null, h('span', { class: 'chtag' }, x.ch === 'P' ? 'prolog' : x.ch), glossify(x.text))),
       readable(p.notes).map((x) => h('p', { class: 'note' }, h('b', null, 'Z przypisów: '), glossify(x.text))),
-      pid === 'piasek' || inside(pid, 'piasek') ? h('p', null, h('button', { type: 'button', class: 'chip', onclick: () => setAbbey(true, pid === 'piasek' ? null : pid) }, 'Otwórz plan opactwa')) : null,
+      plans.length ? h('p', { class: 'chips' }, plans.map((k) => h('button', { type: 'button', class: 'chip', onclick: () => setPlan(k, posOn(pid, k) && posOn(pid, k).id === pid ? pid : null) }, `Otwórz: ${SH[k].title}`))) : null,
       h('h3', null, here.length ? `Sceny w tym miejscu (${here.length})` : 'Sceny w tym miejscu'),
       here.length ? h('ul', { class: 'list' }, here.map((s) => sceneRow(s, { place: s.place !== pid }))) : h('p', { class: 'locked' }, 'W przeczytanych rozdziałach nic się tu jeszcze nie wydarzyło.'),
       mentions.length ? [h('h3', null, 'Wspomniane w'), h('ul', { class: 'list' }, mentions.map((s) => sceneRow(s)))] : null);
@@ -632,7 +641,13 @@
     return wrap;
   }
 
-  const SHEET_GROUPS = [['opactwo', 'Opactwo na Piasku'], ['ostrow', 'Ostrów Tumski'], ['wroclaw', 'Wrocław'], ['slask', 'Śląsk'], ['far', 'Poza mapą']];
+  const SHEET_GROUPS = [['opactwo', 'Opactwo na Piasku'], ['ostrow', 'Ostrów Tumski'], ['wroclaw', 'Wrocław'], ['kotlina', 'Kotlina Cicha i Głuszyca'], ['wawrzyniec', 'Opactwo św. Wawrzyńca'], ['slask', 'Śląsk'], ['far', 'Poza mapą']];
+  const PLAN_LABEL = { opactwo: 'plan opactwa na Piasku', wawrzyniec: 'plan opactwa św. Wawrzyńca', kotlina: 'schemat Kotliny Cichej' };
+  function legendOf(p) {
+    const sh = (p && p.sheets) || {};
+    for (const k of ['opactwo', 'wawrzyniec', 'wroclaw']) if (sh[k] && sh[k].n) return { sheet: k, n: sh[k].n, text: `${k === 'wroclaw' ? 'mapa Wrocławia' : PLAN_LABEL[k]}, nr ${sh[k].n}` };
+    return null;
+  }
   function viewPlaces() {
     const vis = visScenes();
     const counts = new Map();
@@ -643,7 +658,8 @@
     for (const [pid, p] of Object.entries(P)) {
       if (p.hidden) continue;
       const n = counts.get(pid) || 0;
-      const onLegend = p.sheets && ((p.sheets.wroclaw && p.sheets.wroclaw.n) || (p.sheets.opactwo && p.sheets.opactwo.n));
+      const onLegend = (legendOf(p) || {}).n;
+      if (onLegend && legendOf(p).sheet !== 'wroclaw' && !counts.get(pid) && !mentioned.has(pid) && legendOf(p).sheet !== 'opactwo') continue;
       if (!n && !mentioned.has(pid) && !onLegend) continue;
       const g = p.far ? 'far' : bestSheet(pid);
       byGroup.get(g).push({ pid, p, n, num: onLegend || null });
@@ -696,7 +712,7 @@
   function viewAbout() {
     return h('article', { class: 'card' },
       h('h2', null, 'O mapie'),
-      h('p', null, 'Podkładem są cztery mapy autora: Śląsk, Wrocław i Ostrów Tumski około roku 1293 oraz plan opactwa Najświętszej Marii na Piasku. Arkusze leżą jeden na drugim w prawdziwych współrzędnych, więc przy przybliżaniu Śląsk przechodzi we Wrocław, a Wrocław w Ostrów.'),
+      h('p', null, 'Podkładem są mapy autora: Śląsk, Wrocław i Ostrów Tumski około roku 1293, plan opactwa Najświętszej Marii na Piasku, a z „Żółci” plan opactwa św. Wawrzyńca i schemat Kotliny Cichej z Głuszycą (stan sprzed pożaru, około 1290). Arkusze leżą jeden na drugim w prawdziwych współrzędnych, więc przy przybliżaniu Śląsk przechodzi we Wrocław, a Wrocław w Ostrów.'),
       h('p', null, 'Każda scena ma datę według kalendarza juliańskiego, którego wtedy używano, z nazwą dnia w rachubie kościelnej. Dzisiejsza data jest o siedem dni późniejsza.'),
       h('p', null, 'Pieczęć z liczbą oznacza miejsce, w którym dzieją się sceny. Czerwony pierścień na numerowanym kółku to miejsce z legendy mapy autora. Niebieska przerywana linia to podróż.'),
       h('p', { class: 'note' }, h('b', null, 'Bez spoilerów. '), 'Wybór „Przeczytane do” chowa wszystkie sceny, postacie i opisy z dalszych rozdziałów. Ustawienie zostaje w tej przeglądarce.'),
@@ -727,6 +743,9 @@
     const W = Math.max(strip.clientWidth, 300), H = strip.clientHeight || 92;
     const PX0 = 58, X = (j) => PX0 + (j - J0) / (J1 - J0) * (W - PX0 - 6);
     const svg = sv('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Oś czasu: sceny od jesieni 1293 do wiosny 1294' });
+    const defs = sv('defs'); const pat = sv('pattern', { id: 'hatch', width: 7, height: 7, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(35)' });
+    pat.append(sv('rect', { width: 7, height: 7, fill: '#ffffff' }), sv('line', { x1: 0, y1: 0, x2: 0, y2: 7, stroke: '#d9d5ce', 'stroke-width': 1.2 }));
+    defs.append(pat); svg.append(defs);
     const yAxis = H - 18, yCh = 12, yFeast = 25, top = 30;
     // pasma rozdziałów z numerem nad pasmem
     CH.filter((c) => c.num > 0).forEach((c, k) => {
@@ -802,6 +821,7 @@
     sel.value = String(state.progress);
     state.fresh = new Set(visScenes().map((s) => s.id).filter((id) => !before.has(id)));
     if (state.sel && state.sel.type === 'scene' && !visible(scById[state.sel.id])) state.sel = null;
+    if (state.plan && !planOpen(state.plan)) setPlan(null);
     if (state.person && !visScenes().some((s) => (s.chars || []).includes(state.person))) state.person = null;
     renderAll();
     setTimeout(() => { state.fresh.clear(); }, 2000);

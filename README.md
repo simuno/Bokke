@@ -4,14 +4,14 @@ Interaktywna mapa do powieści *Biel* Szymona Urbanowskiego: Wrocław i Śląsk 
 
 ## Co robi
 
-- **Cztery arkusze autora w jednym układzie.** Śląsk, Wrocław i Ostrów Tumski leżą jeden na drugim w prawdziwych współrzędnych. Przy przybliżaniu Śląsk przechodzi we Wrocław, a Wrocław w Ostrów. Plan opactwa na Piasku ma osobny widok.
+- **Arkusze autora w jednym układzie.** Śląsk, Wrocław i Ostrów Tumski leżą jeden na drugim w prawdziwych współrzędnych. Przy przybliżaniu Śląsk przechodzi we Wrocław, a Wrocław w Ostrów. Osobne widoki mają plan opactwa na Piasku oraz, z „Żółci”, schemat Kotliny Cichej z Głuszycą i plan opactwa św. Wawrzyńca (pokazują się od rozdziału VII).
 - **Każda scena ma miejsce i dzień.** 75 scen (prolog, rozdziały I–XI) z datą w kalendarzu juliańskim, nazwą dnia w rachubie kościelnej (feria), świętem i datą według dzisiejszej rachuby.
 - **Bez spoilerów.** Ustawienie „Przeczytane do” chowa sceny, postacie, opisy miejsc i nawet imiona, które książka odsłania później (furtian staje się bratem Sulkiem dopiero od rozdziału VIII). Dalsze rozdziały na osi czasu są zabielone.
 - **Oś czasu** z pasmami rozdziałów i ważnymi świętami (Marcin, Łucja, Boże Narodzenie, Gromniczna, Popielec). Strzałki ← → przechodzą scena po scenie.
 - **Karty** sceny (streszczenie, cytat, kto jest na scenie, rzeczy), miejsca (numer z legendy autora, opis z książki, przypisy) i postaci (opis narastający z lekturą, lista scen, filtr „tylko jej/jego sceny”).
 - **Podróże** poselstwa do Głogowa (V) i drogi w góry (IX) jako przerywane trakty na mapie Śląska.
 - **Słowniczek** z książki: hasła w tekstach kart mają podkreślenie i objaśnienie po najechaniu.
-- Tryb ciemny odwraca mapy, jakby oglądać je pod światło.
+- Jasna oprawa w stylu map: biały papier, czarny tusz, podwójne ramki.
 
 ## Uruchomienie
 
@@ -28,7 +28,7 @@ Czcionki (Uncial Antiqua, Cardo) ładują się z Google Fonts. Bez sieci strona 
 index.html                 strona
 assets/app.js              logika mapy, osi czasu i kart
 assets/app.css             wygląd
-assets/maps/*.webp         pola map autora wycięte z ramek (Śląsk, Wrocław, Ostrów, opactwo)
+assets/maps/*.webp         pola map autora wycięte z ramek (Śląsk, Wrocław, Ostrów, Piasek; z „Żółci”: Kotlina Cicha, św. Wawrzyniec)
 assets/img/okladka.webp    okładka
 assets/vendor/leaflet/     Leaflet 1.9.4 (licencja BSD-2-Clause)
 data/biel-data.js          wszystkie dane: rozdziały, sceny, miejsca, postacie, podróże, święta, słowniczek

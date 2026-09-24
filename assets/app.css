@@ -1,20 +1,23 @@
 /* Biel — atlas do powieści. Arkusz stylów aplikacji (Leaflet ma własny, w vendor/). */
 
 :root {
-  --ground: #e9e7e2;        /* tło pod arkuszami map, jak papier mapy Śląska */
-  --sheet: #fbfaf7;         /* karta, panel, nagłówek */
-  --sheet-2: #f3f1ec;
-  --ink: #2b2622;           /* czerń budynków z map autora */
-  --ink-2: #5f5750;
-  --ink-3: #8f867d;
-  --rule: #d8d3cb;
-  --wax: #a3281e;           /* wosk pieczętny */
-  --wax-2: #c9483c;
-  --wax-ink: #fffaf5;
-  --lapis: #2f4a88;         /* trakty i drogi */
-  --lime: #fdfcfa;          /* biel wapienna: to, czego jeszcze nie przeczytano */
-  --focus: #2f4a88;
-  --shadow: 0 1px 2px rgba(43, 38, 34, .12), 0 6px 24px rgba(43, 38, 34, .10);
+  /* Jeden jasny świat, jak mapy autora: biały papier, czarny tusz, szare kreskowanie. */
+  color-scheme: light;
+  --ground: #f7f6f3;        /* stół pod arkuszami */
+  --sheet: #ffffff;         /* karta, panel, nagłówek: papier map */
+  --sheet-2: #f2f0ec;
+  --ink: #2b2622;           /* czerń budynków z map */
+  --ink-2: #6b625a;         /* szarobrązowy z map */
+  --ink-3: #9a918a;
+  --rule: #d9d5ce;
+  --hatch: #e8e5df;         /* szare pola i woda na mapach */
+  --wax: #2b2622;           /* znaczniki: tusz, jak kościoły na planach */
+  --wax-2: #6b625a;
+  --wax-ink: #ffffff;
+  --lapis: #6b625a;         /* trakty: przerywana szara linia, jak drogi na mapach */
+  --lime: #ffffff;          /* biel: to, czego jeszcze nie przeczytano */
+  --focus: #2b2622;
+  --shadow: 0 1px 2px rgba(43, 38, 34, .08), 0 4px 16px rgba(43, 38, 34, .08);
   --map-filter: none;
 
   --f-display: "Uncial Antiqua", "Palatino Linotype", Palatino, "Book Antiqua", Cardo, Georgia, serif;
@@ -28,45 +31,8 @@
 
   --panel-w: clamp(320px, 30vw, 420px);
   --gutter: 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --ground: #151311;
-    --sheet: #1c1a17;
-    --sheet-2: #24211d;
-    --ink: #ebe5dc;
-    --ink-2: #bdb4a9;
-    --ink-3: #8a8178;
-    --rule: #38332d;
-    --wax: #e0574a;
-    --wax-2: #f07a6e;
-    --wax-ink: #1c0e0b;
-    --lapis: #93aae6;
-    --lime: #2a2622;
-    --focus: #93aae6;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 28px rgba(0, 0, 0, .35);
-    --map-filter: invert(.9) hue-rotate(180deg) sepia(.18) brightness(.92) contrast(.92);
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --ground: #151311;
-  --sheet: #1c1a17;
-  --sheet-2: #24211d;
-  --ink: #ebe5dc;
-  --ink-2: #bdb4a9;
-  --ink-3: #8a8178;
-  --rule: #38332d;
-  --wax: #e0574a;
-  --wax-2: #f07a6e;
-  --wax-ink: #1c0e0b;
-  --lapis: #93aae6;
-  --lime: #2a2622;
-  --focus: #93aae6;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 28px rgba(0, 0, 0, .35);
-  --map-filter: invert(.9) hue-rotate(180deg) sepia(.18) brightness(.92) contrast(.92);
+  /* podwójna ramka jak wokół map: gruba linia i cienka */
+  --frame: 3px solid var(--ink);
 }
 
 * { box-sizing: border-box; }
@@ -186,7 +152,8 @@ a { color: inherit; }
   position: absolute; inset: 0;
   background: var(--ground);
 }
-#abbey { z-index: 500; }
+#map { z-index: 0; }
+#abbey { z-index: 1; }
 #abbey[hidden] { display: none !important; }
 .leaflet-container { font-family: var(--f-body); background: var(--ground); }
 .leaflet-image-layer.sheet { filter: var(--map-filter); transition: opacity .35s ease; }
@@ -487,3 +454,39 @@ details.older summary { cursor: pointer; color: var(--ink-2); font-size: var(--s
   color: var(--ink-2) !important; font-family: var(--f-body); font-size: 11px;
 }
 .leaflet-control-attribution a { color: var(--ink-2) !important; }
+
+/* ---------- jasna oprawa w stylu map ---------- */
+.head { border-bottom: 0; box-shadow: 0 3px 0 var(--ink), 0 7px 0 var(--sheet), 0 8px 0 var(--ink); margin-bottom: 8px; }
+.brand p { font-style: italic; }
+.panel { border-left: 0; box-shadow: inset 3px 0 0 var(--ink), inset 7px 0 0 var(--sheet), inset 8px 0 0 var(--ink); padding-left: 8px; }
+.time { border-top: 1px solid var(--ink); }
+.leaflet-image-layer.sheet.inset { box-shadow: 0 0 0 1px var(--ink), 0 0 0 5px var(--sheet), 0 0 0 6px var(--ink), 0 8px 28px rgba(43,38,34,.18); }
+.seal { box-shadow: 0 0 0 2px var(--sheet), 0 0 0 3px var(--ink); font-family: var(--f-body); }
+.seal.current { box-shadow: 0 0 0 2px var(--sheet), 0 0 0 5px var(--ink); }
+@keyframes ink-in {
+  0% { background: #d9d5ce; color: transparent; transform: translate(-50%, -50%) scale(.7); }
+  50% { background: #9a918a; color: var(--wax-ink); }
+  100% { background: var(--wax); }
+}
+@keyframes ring-in { from { stroke: #d9d5ce; stroke-opacity: .3; } to { stroke: var(--ink); stroke-opacity: 1; } }
+.ring.has { stroke: var(--ink); }
+.ring.sel { stroke: var(--ink); stroke-width: 6; }
+.walk { stroke: var(--ink); }
+.pulse { border-color: var(--ink); }
+.progress select { border-color: var(--ink); background: var(--sheet) linear-gradient(45deg, transparent 50%, var(--ink) 50%) no-repeat right 12px center / 6px 6px; }
+.sheets button[aria-pressed="true"] { border-color: var(--ink); background: var(--sheet); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--ink); }
+.crumb .folio, .row .id, .ch-head .r, .chtag, .card h2 .num { color: var(--ink); }
+.card .quote { border-left-color: var(--ink-3); }
+.chip.pov { border-color: var(--ink); }
+.strip .band { fill: var(--hatch); }
+.strip .band.alt { fill: var(--sheet-2); }
+.strip .dot { fill: var(--ink); stroke: var(--sheet); }
+.strip .dot:hover { fill: var(--ink-2); }
+.strip .cursor { stroke: var(--ink); }
+.strip .lime { fill: url(#hatch); }
+.welcome { border: 1px solid var(--ink); box-shadow: 0 0 0 4px var(--sheet), 0 0 0 5px var(--ink), var(--shadow); }
+.welcome .pick button:hover { border-color: var(--ink); color: var(--ink); }
+.peek button { border-color: var(--ink); color: var(--ink); }
+.stage-caption { background: var(--sheet); border: 1px solid var(--ink); }
+.cover { box-shadow: 0 0 0 1px var(--rule); }

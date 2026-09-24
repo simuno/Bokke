@@ -181,7 +181,33 @@ window.BIEL_DATA = {
     2079
    ],
    "title": "Opactwo Najświętszej Marii na Piasku",
-   "subtitle": "około roku 1293"
+   "subtitle": "około roku 1293",
+   "plan": true,
+   "root": "piasek"
+  },
+  "kotlina": {
+   "img": "assets/maps/kotlina.webp",
+   "size": [
+    2228,
+    815
+   ],
+   "title": "Kotlina Cicha",
+   "subtitle": "z Głuszycą, schemat bez skali · mapa z „Żółci”",
+   "plan": true,
+   "root": "gluszyca",
+   "from": "VII"
+  },
+  "wawrzyniec": {
+   "img": "assets/maps/wawrzyniec.webp",
+   "size": [
+    2228,
+    1535
+   ],
+   "title": "Opactwo Świętego Wawrzyńca",
+   "subtitle": "około roku 1290, przed pożarem · mapa z „Żółci”",
+   "plan": true,
+   "root": "vallis_silens",
+   "from": "VII"
   }
  },
  "places": {
@@ -614,6 +640,10 @@ window.BIEL_DATA = {
     "slask": {
      "x": 790.5,
      "y": 1278.3
+    },
+    "kotlina": {
+     "x": 1745,
+     "y": 470
     }
    },
    "desc": [
@@ -2428,6 +2458,347 @@ window.BIEL_DATA = {
    "notes": [],
    "id": "a_rozmownica"
   },
+  "w_1": {
+   "name": "Wieża",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 456,
+     "y": 526,
+     "n": 1,
+     "cx": 456,
+     "cy": 526,
+     "r": 34
+    }
+   },
+   "id": "w_1"
+  },
+  "w_2": {
+   "name": "Prezbiterium",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1109,
+     "y": 441,
+     "n": 2,
+     "cx": 1109,
+     "cy": 441,
+     "r": 34
+    }
+   },
+   "id": "w_2"
+  },
+  "w_3": {
+   "name": "Chór mnichów",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 855,
+     "y": 445,
+     "n": 3,
+     "cx": 855,
+     "cy": 445,
+     "r": 34
+    }
+   },
+   "id": "w_3"
+  },
+  "w_4": {
+   "name": "Chór konwersów",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 674,
+     "y": 445,
+     "n": 4,
+     "cx": 674,
+     "cy": 445,
+     "r": 34
+    }
+   },
+   "id": "w_4"
+  },
+  "w_5": {
+   "name": "Krużganek",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 584,
+     "y": 713,
+     "n": 5,
+     "cx": 584,
+     "cy": 713,
+     "r": 34
+    }
+   },
+   "id": "w_5"
+  },
+  "w_6": {
+   "name": "Zakrystia",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 999,
+     "y": 648,
+     "n": 6,
+     "cx": 999,
+     "cy": 648,
+     "r": 34
+    }
+   },
+   "id": "w_6"
+  },
+  "w_7": {
+   "name": "Kapitularz",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 999,
+     "y": 723,
+     "n": 7,
+     "cx": 999,
+     "cy": 723,
+     "r": 34
+    }
+   },
+   "id": "w_7"
+  },
+  "w_8": {
+   "name": "Skryptorium, nad nim dormitorium",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 999,
+     "y": 892,
+     "n": 8,
+     "cx": 999,
+     "cy": 892,
+     "r": 34
+    }
+   },
+   "id": "w_8"
+  },
+  "w_9": {
+   "name": "Refektarz",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 801,
+     "y": 971,
+     "n": 9,
+     "cx": 801,
+     "cy": 971,
+     "r": 34
+    }
+   },
+   "id": "w_9"
+  },
+  "w_10": {
+   "name": "Kuchnia",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 643,
+     "y": 971,
+     "n": 10,
+     "cx": 643,
+     "cy": 971,
+     "r": 34
+    }
+   },
+   "id": "w_10"
+  },
+  "w_11": {
+   "name": "Kwatery gości",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 469,
+     "y": 684,
+     "n": 11,
+     "cx": 469,
+     "cy": 684,
+     "r": 34
+    }
+   },
+   "id": "w_11"
+  },
+  "w_12": {
+   "name": "Cellarium",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 483,
+     "y": 928,
+     "n": 12,
+     "cx": 483,
+     "cy": 928,
+     "r": 34
+    }
+   },
+   "id": "w_12"
+  },
+  "w_13": {
+   "name": "Kryty korytarz",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1254,
+     "y": 650,
+     "n": 13,
+     "cx": 1254,
+     "cy": 650,
+     "r": 34
+    }
+   },
+   "id": "w_13"
+  },
+  "w_14": {
+   "name": "Izba chorych",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1531,
+     "y": 668,
+     "n": 14,
+     "cx": 1531,
+     "cy": 668,
+     "r": 34
+    }
+   },
+   "id": "w_14"
+  },
+  "w_15": {
+   "name": "Stajnia",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1518,
+     "y": 799,
+     "n": 15,
+     "cx": 1518,
+     "cy": 799,
+     "r": 34
+    }
+   },
+   "id": "w_15"
+  },
+  "w_16": {
+   "name": "Ogród ziołowy",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1391,
+     "y": 463,
+     "n": 16,
+     "cx": 1391,
+     "cy": 463,
+     "r": 34
+    }
+   },
+   "id": "w_16"
+  },
+  "w_17": {
+   "name": "Piekarnia",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1200,
+     "y": 980,
+     "n": 17,
+     "cx": 1200,
+     "cy": 980,
+     "r": 34
+    }
+   },
+   "id": "w_17"
+  },
+  "w_18": {
+   "name": "Łaźnia",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1430,
+     "y": 980,
+     "n": 18,
+     "cx": 1430,
+     "cy": 980,
+     "r": 34
+    }
+   },
+   "id": "w_18"
+  },
+  "w_19": {
+   "name": "Spichlerz",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 420,
+     "y": 1153,
+     "n": 19,
+     "cx": 420,
+     "cy": 1153,
+     "r": 34
+    }
+   },
+   "id": "w_19"
+  },
+  "w_20": {
+   "name": "Obora",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 302,
+     "y": 808,
+     "n": 20,
+     "cx": 302,
+     "cy": 808,
+     "r": 34
+    }
+   },
+   "id": "w_20"
+  },
+  "w_21": {
+   "name": "Dom furtiana",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 771,
+     "y": 1340,
+     "n": 21,
+     "cx": 771,
+     "cy": 1340,
+     "r": 34
+    }
+   },
+   "id": "w_21"
+  },
+  "w_22": {
+   "name": "Brama do huty",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1592,
+     "y": 1058,
+     "n": 22,
+     "cx": 1592,
+     "cy": 1058,
+     "r": 34
+    }
+   },
+   "id": "w_22"
+  },
+  "w_brama": {
+   "name": "Brama opactwa",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 708,
+     "y": 1417
+    }
+   },
+   "id": "w_brama"
+  },
   "a_dziedziniec_gospodarczy": {
    "name": "Podwórze gospodarcze opactwa",
    "parent": "piasek",
@@ -2841,11 +3212,19 @@ window.BIEL_DATA = {
    "short": "Dolina Cicha",
    "sheets": {
     "slask": {
-     "x": 801,
-     "y": 1296
+     "x": 803,
+     "y": 1263
+    },
+    "kotlina": {
+     "x": 415,
+     "y": 146
+    },
+    "wawrzyniec": {
+     "x": 1076,
+     "y": 1180
     }
    },
-   "approx": "Opactwa nie ma na mapie autora. Według książki leży „pod Siwą Kopą, nad potokiem, ze trzy staje od Głuszycy”, w górze doliny nad wsią.",
+   "approx": "Na mapie Śląska znacznik stoi umownie, według mapy z „Żółci”. Plan opactwa i schemat Kotliny Cichej pochodzą z „Żółci” i pokazują stan sprzed pożaru (ok. 1290); w 1294 zostały ruiny.",
    "desc": [
     {
      "ch": "VII",
@@ -2891,6 +3270,16 @@ window.BIEL_DATA = {
   "vallis_silens_huta": {
    "name": "Huta szkła w ruinach opactwa",
    "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 1790,
+     "y": 1067
+    },
+    "kotlina": {
+     "x": 515,
+     "y": 146
+    }
+   },
    "desc": [
     {
      "ch": "X",
@@ -2903,6 +3292,12 @@ window.BIEL_DATA = {
   "zlotucha_potok": {
    "name": "Potok Złotucha",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 990,
+     "y": 468
+    }
+   },
    "desc": [
     {
      "ch": "X",
@@ -3134,6 +3529,12 @@ window.BIEL_DATA = {
   "siwa_kopa": {
    "name": "Siwa Kopa",
    "parent": "vallis_silens",
+   "sheets": {
+    "kotlina": {
+     "x": 167,
+     "y": 153
+    }
+   },
    "desc": [
     {
      "ch": "IX",
@@ -3216,6 +3617,12 @@ window.BIEL_DATA = {
   "gluszyca_karczma": {
    "name": "Karczma Gniewosza",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 1530,
+     "y": 612
+    }
+   },
    "desc": [
     {
      "ch": "X",
@@ -3233,6 +3640,13 @@ window.BIEL_DATA = {
   "gluszyca_kuznia": {
    "name": "Kuźnia przy dzwonnicy",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 1650,
+     "y": 505
+    }
+   },
+   "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
    "desc": [
     {
      "ch": "X",
@@ -3245,6 +3659,12 @@ window.BIEL_DATA = {
   "gluszyca_kosciol": {
    "name": "Drewniany kościół w Głuszycy",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 1612,
+     "y": 546
+    }
+   },
    "desc": [
     {
      "ch": "X",
@@ -3257,6 +3677,13 @@ window.BIEL_DATA = {
   "gluszyca_chalupa_malgorzaty": {
    "name": "Chałupa Małgorzaty",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 1712,
+     "y": 610
+    }
+   },
+   "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
    "desc": [
     {
      "ch": "X",
@@ -3269,6 +3696,13 @@ window.BIEL_DATA = {
   "gluszyca_dab": {
    "name": "Dąb z grobem za płotem",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 1830,
+     "y": 650
+    }
+   },
+   "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
    "desc": [
     {
      "ch": "X",
@@ -3285,6 +3719,13 @@ window.BIEL_DATA = {
   "gluszyca_zrebka": {
    "name": "Ostatnia zrębka nad drogą w dół",
    "parent": "gluszyca",
+   "sheets": {
+    "kotlina": {
+     "x": 2080,
+     "y": 758
+    }
+   },
+   "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
    "desc": [
     {
      "ch": "X",
