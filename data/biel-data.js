@@ -3,7 +3,7 @@ window.BIEL_DATA = {
  "meta": {
   "title": "Biel",
   "author": "Szymon Urbanowski",
-  "version": "2026-09-24 (prolog–XI)",
+  "version": "2026-09-25 (prolog–XI)",
   "cover": "assets/img/okladka.webp"
  },
  "chapters": [
@@ -155,6 +155,25 @@ window.BIEL_DATA = {
    "title": "Wrocław",
    "subtitle": "około roku 1293"
   },
+  "mury": {
+   "img": "assets/maps/mury.webp",
+   "size": [
+    2880,
+    2688
+   ],
+   "bounds": [
+    [
+     51.10551514370044,
+     17.024823151672344
+    ],
+    [
+     51.117903324806186,
+     17.045965182160767
+    ]
+   ],
+   "title": "Wrocław",
+   "subtitle": "miasto w murach, około roku 1293"
+  },
   "ostrow": {
    "img": "assets/maps/ostrow.webp",
    "size": [
@@ -201,7 +220,7 @@ window.BIEL_DATA = {
    "img": "assets/maps/wawrzyniec.webp",
    "size": [
     2228,
-    1535
+    1498
    ],
    "title": "Opactwo Świętego Wawrzyńca",
    "subtitle": "około roku 1290, przed pożarem · mapa z „Żółci”",
@@ -230,6 +249,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "wroclaw"
   },
   "glogow": {
@@ -247,6 +267,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "glogow"
   },
   "legnica": {
@@ -257,6 +278,7 @@ window.BIEL_DATA = {
      "y": 837.5
     }
    },
+   "first": "P.1",
    "id": "legnica"
   },
   "swidnica": {
@@ -274,6 +296,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VIII.1",
    "id": "swidnica"
   },
   "opole": {
@@ -284,6 +307,7 @@ window.BIEL_DATA = {
      "y": 1286.6
     }
    },
+   "first": "VII.4",
    "id": "opole"
   },
   "nysa": {
@@ -306,6 +330,7 @@ window.BIEL_DATA = {
      "text": "Przypis 12: „Nysa była siedzibą biskupów wrocławskich i ośrodkiem ich dóbr.”"
     }
    ],
+   "first": "II.4",
    "id": "nysa"
   },
   "raciborz": {
@@ -316,6 +341,7 @@ window.BIEL_DATA = {
      "y": 1769.1
     }
    },
+   "first": "VII.4",
    "id": "raciborz"
   },
   "milicz": {
@@ -326,6 +352,7 @@ window.BIEL_DATA = {
      "y": 571.3
     }
    },
+   "first": "P.1",
    "id": "milicz"
   },
   "zmigrod": {
@@ -353,6 +380,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.2",
    "id": "scinawa"
   },
   "sycow": {
@@ -393,6 +421,7 @@ window.BIEL_DATA = {
      "y": 837.5
     }
    },
+   "first": "II.2",
    "id": "olesnica"
   },
   "nowogrodziec": {
@@ -493,6 +522,7 @@ window.BIEL_DATA = {
      "y": 1061.9
     }
    },
+   "first": "III.5",
    "id": "olawa"
   },
   "brzeg": {
@@ -523,6 +553,7 @@ window.BIEL_DATA = {
      "y": 1353.2
     }
    },
+   "first": "VII.2",
    "id": "zabkowice"
   },
   "klodzko": {
@@ -560,6 +591,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "trzebnica"
   },
   "lubiaz": {
@@ -570,6 +602,7 @@ window.BIEL_DATA = {
      "y": 786.7
     }
    },
+   "first": "VII.1",
    "id": "lubiaz"
   },
   "uraz": {
@@ -632,6 +665,7 @@ window.BIEL_DATA = {
      "text": "Przypis 18: „Zamek na szczycie góry o tej nazwie w Górach Kamiennych, na pograniczu z Czechami, należący do księcia Bolka I; kasztelan rogowiecki występuje w źródłach w 1292 r.”"
     }
    ],
+   "first": "IX.6",
    "id": "rogowiec"
   },
   "gluszyca": {
@@ -642,8 +676,8 @@ window.BIEL_DATA = {
      "y": 1278.3
     },
     "kotlina": {
-     "x": 1745,
-     "y": 470
+     "x": 1660,
+     "y": 430
     }
    },
    "desc": [
@@ -657,6 +691,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.2",
    "id": "gluszyca"
   },
   "henrykow": {
@@ -679,6 +714,7 @@ window.BIEL_DATA = {
      "text": "Przypis 2: „Opactwo cystersów na Przedgórzu Sudeckim, ufundowane w 1222 r.”"
     }
    ],
+   "first": "VII.4",
    "id": "henrykow"
   },
   "kamieniec": {
@@ -736,6 +772,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.3",
    "id": "sleza_gora"
   },
   "ligota": {
@@ -754,6 +791,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "ligota"
   },
   "rynek": {
@@ -768,6 +806,10 @@ window.BIEL_DATA = {
      "cx": 696,
      "cy": 1311,
      "r": 23
+    },
+    "mury": {
+     "x": 1030.4,
+     "y": 1689.6
     }
    },
    "desc": [
@@ -789,6 +831,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.6",
    "id": "rynek"
   },
   "kurzy_targ": {
@@ -811,6 +854,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.1",
    "id": "kurzy_targ"
   },
   "nowy_targ": {
@@ -839,6 +883,15 @@ window.BIEL_DATA = {
      "cx": 959,
      "cy": 1335,
      "r": 23
+    },
+    "mury": {
+     "x": 1544.0,
+     "y": 1672.0,
+     "n": 5,
+     "cx": 1544.0,
+     "cy": 1672.0,
+     "r": 33.6,
+     "label": "Fara św. Marii Magdaleny ze szkołą, cmentarzem i grabarzem"
     }
    },
    "desc": [
@@ -885,6 +938,7 @@ window.BIEL_DATA = {
      "text": "Przypis 5: szkoła parafialna przy farze wrocławskiej; zgodę na jej założenie, obok szkoły katedralnej, miasto uzyskało w 1267 r."
     }
    ],
+   "first": "II.2",
    "id": "fara_magdalena"
   },
   "elzbieta": {
@@ -898,6 +952,15 @@ window.BIEL_DATA = {
      "cx": 550,
      "cy": 1103,
      "r": 23
+    },
+    "mury": {
+     "x": 783.0,
+     "y": 1351.4,
+     "n": 18,
+     "cx": 783.0,
+     "cy": 1351.4,
+     "r": 33.6,
+     "label": "Kościół św. Elżbiety"
     }
    },
    "id": "elzbieta"
@@ -913,6 +976,15 @@ window.BIEL_DATA = {
      "cx": 877,
      "cy": 800,
      "r": 22
+    },
+    "mury": {
+     "x": 1327.0,
+     "y": 804.2,
+     "n": 7,
+     "cx": 1327.0,
+     "cy": 804.2,
+     "r": 33.6,
+     "label": "Zamek książęcy z kaplicą"
     }
    },
    "desc": [
@@ -946,6 +1018,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "zamek"
   },
   "laznia": {
@@ -959,6 +1032,15 @@ window.BIEL_DATA = {
      "cx": 1111,
      "cy": 762,
      "r": 22
+    },
+    "mury": {
+     "x": 1736.6,
+     "y": 734.7,
+     "n": 10,
+     "cx": 1736.6,
+     "cy": 734.7,
+     "r": 33.6,
+     "label": "Łaźnia pod zamkiem nad Odrą"
     }
    },
    "desc": [
@@ -980,6 +1062,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "III.1",
    "id": "laznia"
   },
   "dzielnica_zydowska": {
@@ -1006,6 +1089,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.1",
    "id": "dzielnica_zydowska"
   },
   "klaryski": {
@@ -1019,6 +1103,15 @@ window.BIEL_DATA = {
      "cx": 1086,
      "cy": 945,
      "r": 23
+    },
+    "mury": {
+     "x": 1738.6,
+     "y": 1076.8,
+     "n": 19,
+     "cx": 1738.6,
+     "cy": 1076.8,
+     "r": 33.6,
+     "label": "Klaryski"
     }
    },
    "id": "klaryski"
@@ -1034,6 +1127,15 @@ window.BIEL_DATA = {
      "cx": 1192,
      "cy": 958,
      "r": 23
+    },
+    "mury": {
+     "x": 1882.9,
+     "y": 1151.0,
+     "n": 20,
+     "cx": 1882.9,
+     "cy": 1151.0,
+     "r": 33.6,
+     "label": "Franciszkanie u św. Jakuba"
     }
    },
    "id": "franciszkanie"
@@ -1049,6 +1151,15 @@ window.BIEL_DATA = {
      "cx": 1254,
      "cy": 1366,
      "r": 23
+    },
+    "mury": {
+     "x": 2028.8,
+     "y": 1798.7,
+     "n": 6,
+     "cx": 2028.8,
+     "cy": 1798.7,
+     "r": 33.6,
+     "label": "Dominikanie u św. Wojciecha"
     }
    },
    "desc": [
@@ -1063,6 +1174,7 @@ window.BIEL_DATA = {
      "text": "Przypis 5: Kościół św. Wojciecha we Wrocławiu, od 1226 r. w rękach dominikanów, czyli braci kaznodziejów."
     }
    ],
+   "first": "IV.4",
    "id": "dominikanie"
   },
   "brama_most": {
@@ -1076,6 +1188,15 @@ window.BIEL_DATA = {
      "cx": 1329,
      "cy": 1013,
      "r": 23
+    },
+    "mury": {
+     "x": 2088.3,
+     "y": 1131.8,
+     "n": 11,
+     "cx": 2088.3,
+     "cy": 1131.8,
+     "r": 33.6,
+     "label": "Brama przy moście"
     }
    },
    "desc": [
@@ -1085,6 +1206,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IV.4",
    "id": "brama_most"
   },
   "brama_olawska": {
@@ -1111,6 +1233,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "III.5",
    "id": "brama_olawska"
   },
   "dwor_lubiaski": {
@@ -1124,6 +1247,15 @@ window.BIEL_DATA = {
      "cx": 381,
      "cy": 1098,
      "r": 23
+    },
+    "mury": {
+     "x": 659.2,
+     "y": 1214.1,
+     "n": 17,
+     "cx": 659.2,
+     "cy": 1214.1,
+     "r": 33.6,
+     "label": "Dwór opactwa lubiąskiego w uliczce ku Odrze"
     }
    },
    "desc": [
@@ -1146,6 +1278,7 @@ window.BIEL_DATA = {
      "text": "Przypis 5: większe opactwa, zwłaszcza cysterskie, utrzymywały w miastach własne dwory (łac. curia) – składy, w których sprzedawano wełnę, skóry i inne płody klasztornych gospodarstw, a zarazem gospody dla braci w podróży. Lubiąż – najstarsze opactwo cystersów na Śląsku, nad Odrą, ufundowane w XII w. przez Bolesława Wysokiego."
     }
    ],
+   "first": "VII.1",
    "id": "dwor_lubiaski"
   },
   "mlyn_olawa": {
@@ -1159,6 +1292,15 @@ window.BIEL_DATA = {
      "cx": 1500,
      "cy": 1796,
      "r": 23
+    },
+    "mury": {
+     "x": 2393.6,
+     "y": 2491.8,
+     "n": 24,
+     "cx": 2393.6,
+     "cy": 2491.8,
+     "r": 33.6,
+     "label": "Młyn na Oławie (pół młyna Piasku)"
     }
    },
    "desc": [
@@ -1173,6 +1315,7 @@ window.BIEL_DATA = {
      "text": "Przypis 10: według kroniki opatów klasztoru na Piasku w 1291 r. Henryk V zburzył młyn opactwa na Oławie w nowym mieście, bo dla umocnienia miasta skierował rzekę innym korytem; w zamian nadał klasztorowi połowę nowo zbudowanego młyna i połowę połowu ryb przy nim, czego klasztor nie zdołał potem wyegzekwować."
     }
    ],
+   "first": "IV.6",
    "id": "mlyn_olawa"
   },
   "piasek": {
@@ -1191,6 +1334,15 @@ window.BIEL_DATA = {
     "ostrow": {
      "x": 374,
      "y": 965
+    },
+    "mury": {
+     "x": 2185.3,
+     "y": 686.1,
+     "n": 21,
+     "cx": 2185.3,
+     "cy": 686.1,
+     "r": 33.6,
+     "label": "Opactwo Najświętszej Marii na Piasku, furta i placyk"
     }
    },
    "desc": [
@@ -1241,6 +1393,7 @@ window.BIEL_DATA = {
      "text": "Przypis 17: popiół na Środę Popielcową otrzymywano ze spalenia gałązek poświęconych w Niedzielę Palmową poprzedniego roku; w Europie Środkowej zamiast palm używano gałązek wierzby."
     }
    ],
+   "first": "P.1",
    "id": "piasek"
   },
   "katedra": {
@@ -1288,6 +1441,7 @@ window.BIEL_DATA = {
      "text": "Przypisy 12–13: soboty suchych dni były terminami święceń; święcenia niższe i wyższe udzielano podczas mszy, między czytaniami."
     }
    ],
+   "first": "I.3",
    "id": "katedra"
   },
   "dwor_biskupi": {
@@ -1305,6 +1459,15 @@ window.BIEL_DATA = {
     "ostrow": {
      "x": 965,
      "y": 1215
+    },
+    "mury": {
+     "x": 2685.8,
+     "y": 921.0,
+     "n": 25,
+     "cx": 2685.8,
+     "cy": 921.0,
+     "r": 33.6,
+     "label": "Dwór biskupi na Ostrowie"
     }
    },
    "desc": [
@@ -1334,6 +1497,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.6",
    "id": "dwor_biskupi"
   },
   "idzi": {
@@ -1360,6 +1524,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.2",
    "id": "idzi"
   },
   "kurie": {
@@ -1394,6 +1559,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.5",
    "id": "kurie"
   },
   "swiety_krzyz": {
@@ -1450,6 +1616,7 @@ window.BIEL_DATA = {
      "text": "Przypis 9 (skrót): kolegiata Świętego Krzyża i świętego Bartłomieja, ufundowana przez Henryka IV w 1288 r. jako wotum po zakończeniu sporu z biskupem Tomaszem II; dolny kościół nosi wezwanie św. Bartłomieja; testament księcia przewidywał w niej pochówek tymczasowy, do czasu ukończenia innej fundacji, której nigdy nie ukończono."
     }
    ],
+   "first": "P.1",
    "id": "swiety_krzyz"
   },
   "stary_zamek": {
@@ -1492,6 +1659,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.6",
    "id": "stary_zamek"
   },
   "wincenty": {
@@ -1514,6 +1682,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.2",
    "id": "wincenty"
   },
   "cegielnie": {
@@ -1553,6 +1722,15 @@ window.BIEL_DATA = {
     "wroclaw": {
      "x": 1290,
      "y": 905
+    },
+    "mury": {
+     "x": 2095.0,
+     "y": 918.7,
+     "n": 12,
+     "cx": 2095.0,
+     "cy": 918.7,
+     "r": 33.6,
+     "label": "Most Piaskowy"
     }
    },
    "desc": [
@@ -1590,6 +1768,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.3",
    "id": "most_piaskowy"
   },
   "most_tumski": {
@@ -1628,6 +1807,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.6",
    "id": "most_tumski"
   },
   "nowe_miasto": {
@@ -1673,6 +1853,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "olbin"
   },
   "ostrow": {
@@ -1724,6 +1905,7 @@ window.BIEL_DATA = {
      "text": "Przypis 9: „Wyspa na Odrze, najstarsza część Wrocławia: katedra, dwór biskupi i stary zamek książęcy.”"
     }
    ],
+   "first": "P.1",
    "id": "ostrow"
   },
   "odra": {
@@ -1758,6 +1940,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "odra"
   },
   "kaplica_nmp": {
@@ -1793,6 +1976,7 @@ window.BIEL_DATA = {
      "text": "Przypis 10: ceglany, dwukondygnacyjny kościół na planie ośmioboku z krótkim prezbiterium, zaczęty przez Henryka IV w latach osiemdziesiątych XIII w. na terenie zamku na Ostrowie Tumskim, prawdopodobnie jako kościół zamierzonego klasztoru i kaplica grobowa; budowę przerwano za życia fundatora, dokończono później znacznie niżej, a świątynia przejęła wezwanie św. Marcina. O planowanej wysokości świadczą dolne partie potężnych przypór."
     }
    ],
+   "first": "II.4",
    "id": "kaplica_nmp"
   },
   "cmentarz_katedralny": {
@@ -1852,6 +2036,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "a_kosciol"
   },
   "a_portal": {
@@ -1879,6 +2064,7 @@ window.BIEL_DATA = {
      "text": "Przypis 2: „Tympanon fundacyjny – Kamienna płaskorzeźba z połowy XII w. z kościoła NMP na Piasku, przedstawiająca Marię, żonę Piotra Włostowica, i jej syna Świętosława ofiarujących kościół Matce Boskiej. Zachowana do dziś.”"
     }
    ],
+   "first": "I.2",
    "id": "a_portal"
   },
   "a_prezbiterium": {
@@ -1905,6 +2091,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "a_prezbiterium"
   },
   "a_kaplica_fundatorow": {
@@ -1955,6 +2142,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "a_zakrystia"
   },
   "a_kruzganek": {
@@ -1981,6 +2169,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_kruzganek"
   },
   "a_kapitularz": {
@@ -2017,6 +2206,7 @@ window.BIEL_DATA = {
      "text": "Przypis 4: spowiedź kanoników regularnych u własnego opata w suche dni przyjęto w powieści jako zwyczaj domu."
     }
    ],
+   "first": "I.3",
    "id": "a_kapitularz"
   },
   "a_refektarz": {
@@ -2039,6 +2229,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.4",
    "id": "a_refektarz"
   },
   "a_kuchnia": {
@@ -2065,6 +2256,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_kuchnia"
   },
   "a_skryptorium": {
@@ -2087,6 +2279,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_skryptorium"
   },
   "a_dom_opata": {
@@ -2125,6 +2318,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.5",
    "id": "a_dom_opata"
   },
   "a_obora": {
@@ -2163,6 +2357,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_obora"
   },
   "a_stodola": {
@@ -2193,6 +2388,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.4",
    "id": "a_stodola"
   },
   "a_warzelnia": {
@@ -2219,6 +2415,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_warzelnia"
   },
   "a_spizarnia": {
@@ -2241,6 +2438,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VII.1",
    "id": "a_spizarnia"
   },
   "a_stajnia": {
@@ -2267,6 +2465,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.1",
    "id": "a_stajnia"
   },
   "a_studnia": {
@@ -2289,6 +2488,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IV.1",
    "id": "a_studnia"
   },
   "a_brama": {
@@ -2339,6 +2539,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.1",
    "id": "a_brama"
   },
   "a_mlyny_jaz": {
@@ -2361,6 +2562,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "a_mlyny_jaz"
   },
   "a_pergaminiarz": {
@@ -2374,6 +2576,15 @@ window.BIEL_DATA = {
      "cx": 1763,
      "cy": 823,
      "r": 31
+    },
+    "mury": {
+     "x": 1959.4,
+     "y": 580.5,
+     "n": 22,
+     "cx": 1959.4,
+     "cy": 580.5,
+     "r": 33.6,
+     "label": "Pergaminiarz nad Odrą poniżej Piasku"
     }
    },
    "desc": [
@@ -2391,6 +2602,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "P.1",
    "id": "a_pergaminiarz"
   },
   "a_dormitorium": {
@@ -2403,6 +2615,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.4",
    "id": "a_dormitorium"
   },
   "a_komora_dietricha": {
@@ -2440,6 +2653,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.4",
    "id": "a_komora_dietricha"
   },
   "a_rozmownica": {
@@ -2456,6 +2670,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_rozmownica"
   },
   "w_1": {
@@ -2534,7 +2749,7 @@ window.BIEL_DATA = {
    "id": "w_5"
   },
   "w_6": {
-   "name": "Zakrystia",
+   "name": "Zakrystia, nad nią biblioteka",
    "parent": "vallis_silens",
    "sheets": {
     "wawrzyniec": {
@@ -2788,6 +3003,21 @@ window.BIEL_DATA = {
    },
    "id": "w_22"
   },
+  "w_23": {
+   "name": "Lawaterium",
+   "parent": "vallis_silens",
+   "sheets": {
+    "wawrzyniec": {
+     "x": 848,
+     "y": 883,
+     "n": 23,
+     "cx": 848,
+     "cy": 883,
+     "r": 34
+    }
+   },
+   "id": "w_23"
+  },
   "w_brama": {
    "name": "Brama opactwa",
    "parent": "vallis_silens",
@@ -2815,6 +3045,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "a_dziedziniec_gospodarczy"
   },
   "dom_oficjala": {
@@ -2827,6 +3058,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.6",
    "id": "dom_oficjala"
   },
   "izba_biskupia": {
@@ -2839,6 +3071,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.4",
    "id": "izba_biskupia"
   },
   "ostrow_izba_przy_sieni": {
@@ -2863,11 +3096,23 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.3",
    "id": "ostrow_izba_przy_sieni"
   },
   "kancelaria": {
    "name": "Kancelaria książęca",
    "parent": "zamek",
+   "sheets": {
+    "mury": {
+     "x": 1438.4,
+     "y": 971.8,
+     "n": 8,
+     "cx": 1438.4,
+     "cy": 971.8,
+     "r": 33.6,
+     "label": "Kancelaria: izba na parterze, pięćdziesiąt kroków za bramą"
+    }
+   },
    "desc": [
     {
      "ch": "II",
@@ -2907,6 +3152,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.6",
    "id": "kancelaria"
   },
   "izba_protonotariusza": {
@@ -2923,6 +3169,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "III.2",
    "id": "izba_protonotariusza"
   },
   "stary_zamek_palatium": {
@@ -2946,6 +3193,7 @@ window.BIEL_DATA = {
      "text": "Przypis 8: palatium – murowany budynek mieszkalny i reprezentacyjny w obrębie zamku książęcego."
     }
    ],
+   "first": "III.4",
    "id": "stary_zamek_palatium"
   },
   "stary_zamek_izba_zachodnia": {
@@ -2968,6 +3216,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "III.4",
    "id": "stary_zamek_izba_zachodnia"
   },
   "stary_zamek_piwnica": {
@@ -2984,11 +3233,23 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "III.5",
    "id": "stary_zamek_piwnica"
   },
   "kramy": {
    "name": "Kramy na Rynku",
    "parent": "rynek",
+   "sheets": {
+    "mury": {
+     "x": 857.6,
+     "y": 1587.5,
+     "n": 3,
+     "cx": 857.6,
+     "cy": 1587.5,
+     "r": 33.6,
+     "label": "Kramy sukiennicze"
+    }
+   },
    "desc": [
     {
      "ch": "II",
@@ -3005,11 +3266,23 @@ window.BIEL_DATA = {
      "text": "Przypis 7: kramy i pomieszczenia handlowe na wrocławskim rynku, z których czynsz płacono księciu, a od 1266 r. po części miastu."
     }
    ],
+   "first": "II.4",
    "id": "kramy"
   },
   "lawy_chlebowe": {
    "name": "Ławy chlebowe",
    "parent": "rynek",
+   "sheets": {
+    "mury": {
+     "x": 1099.8,
+     "y": 1615.0,
+     "n": 2,
+     "cx": 1099.8,
+     "cy": 1615.0,
+     "r": 33.6,
+     "label": "Ławy chlebowe pod wspólnym dachem"
+    }
+   },
    "desc": [
     {
      "ch": "VI",
@@ -3029,11 +3302,23 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VI.2",
    "id": "lawy_chlebowe"
   },
   "ratusz": {
    "name": "Ratusz",
    "parent": "rynek",
+   "sheets": {
+    "mury": {
+     "x": 942.4,
+     "y": 1752.6,
+     "n": 1,
+     "cx": 942.4,
+     "cy": 1752.6,
+     "r": 33.6,
+     "label": "Ratusz; na piętrze izba rady, od strony ław"
+    }
+   },
    "desc": [
     {
      "ch": "VI",
@@ -3053,6 +3338,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VI.1",
    "id": "ratusz"
   },
   "waga": {
@@ -3065,11 +3351,19 @@ window.BIEL_DATA = {
    "parent": "wroclaw",
    "sheets": {
     "wroclaw": {
-     "x": 1180,
-     "y": 600
+     "x": 1350.5,
+     "y": 641.6
+    },
+    "mury": {
+     "x": 2150.1,
+     "y": 472.6,
+     "n": 23,
+     "cx": 2150.1,
+     "cy": 472.6,
+     "r": 33.6,
+     "label": "Młyny na Piasku i rozlewisko nad młynami"
     }
    },
-   "approx": "Tekst mówi tylko „nad młynami, gdzie woda stoi”. Znacznik stoi na Odrze powyżej młynów na Piasku.",
    "desc": [
     {
      "ch": "VIII",
@@ -3077,6 +3371,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VIII.4",
    "id": "rozlewisko"
   },
   "dom_agnieszki": {
@@ -3086,6 +3381,10 @@ window.BIEL_DATA = {
     "wroclaw": {
      "x": 1110,
      "y": 1450
+    },
+    "mury": {
+     "x": 1720.5,
+     "y": 1916.8
     }
    },
    "approx": "Tekst mówi: „za farą w uliczki ku murowi, gdzie domy z drewna na kamiennych podmurówkach stały ciaśniej i niżej”. Znacznik stoi umownie w tej okolicy.",
@@ -3104,6 +3403,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VI.1",
    "id": "dom_agnieszki"
   },
   "glogow_zamek": {
@@ -3116,6 +3416,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.3",
    "id": "glogow_zamek"
   },
   "glogow_kamienica_kupca": {
@@ -3128,6 +3429,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.3",
    "id": "glogow_kamienica_kupca"
   },
   "glogow_piwnica": {
@@ -3144,6 +3446,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.5",
    "id": "glogow_piwnica"
   },
   "glogow_most": {
@@ -3156,6 +3459,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.6",
    "id": "glogow_most"
   },
   "sroda": {
@@ -3187,6 +3491,7 @@ window.BIEL_DATA = {
      "text": "Przypis 7: Środa Śląska, miasto na trakcie z Wrocławia do Legnicy i Głogowa; tam nocowało poselstwo w drodze do Głogowa w grudniu 1293 r. (rozdz. V)."
     }
    ],
+   "first": "V.2",
    "id": "sroda"
   },
   "otmuchow": {
@@ -3205,6 +3510,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.4",
    "id": "otmuchow"
   },
   "vallis_silens": {
@@ -3216,7 +3522,7 @@ window.BIEL_DATA = {
      "y": 1263
     },
     "kotlina": {
-     "x": 415,
+     "x": 418,
      "y": 146
     },
     "wawrzyniec": {
@@ -3265,6 +3571,7 @@ window.BIEL_DATA = {
      "text": "Przypis 2: wspomnienie św. Agnieszki przypada 21 stycznia; opactwo spłonęło w nocy z 21 na 22 stycznia 1290 r."
     }
    ],
+   "first": "VII.2",
    "id": "vallis_silens"
   },
   "vallis_silens_huta": {
@@ -3287,6 +3594,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.2",
    "id": "vallis_silens_huta"
   },
   "zlotucha_potok": {
@@ -3294,8 +3602,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 990,
-     "y": 468
+     "x": 1232,
+     "y": 572
     }
    },
    "desc": [
@@ -3305,6 +3613,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.1",
    "id": "zlotucha_potok"
   },
   "bystrzyca_most_clo": {
@@ -3328,6 +3637,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.3",
    "id": "bystrzyca_most_clo"
   },
   "karczma_trakt": {
@@ -3350,6 +3660,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.4",
    "id": "karczma_trakt"
   },
   "a_skarbiec": {
@@ -3362,6 +3673,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.5",
    "id": "a_skarbiec"
   },
   "brama_zamkowa": {
@@ -3369,11 +3681,19 @@ window.BIEL_DATA = {
    "parent": "zamek",
    "sheets": {
     "wroclaw": {
-     "x": 965,
-     "y": 935
+     "x": 1033.6,
+     "y": 897.2
+    },
+    "mury": {
+     "x": 1584.0,
+     "y": 929.3,
+     "n": 9,
+     "cx": 1584.0,
+     "cy": 929.3,
+     "r": 33.6,
+     "label": "Brama zamkowa i plac przed nią"
     }
    },
-   "approx": "Plac przed bramą zamku książęcego; znacznik stoi umownie od strony miasta.",
    "desc": [
     {
      "ch": "VII",
@@ -3381,6 +3701,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VII.7",
    "id": "brama_zamkowa"
   },
   "cmentarz_farny": {
@@ -3393,6 +3714,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VII.1",
    "id": "cmentarz_farny"
   },
   "dom_gertrudy": {
@@ -3405,11 +3727,23 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VII.3",
    "id": "dom_gertrudy"
   },
   "dom_hermana": {
    "name": "Dom Hermana przy Rynku",
    "parent": "rynek",
+   "sheets": {
+    "mury": {
+     "x": 897.6,
+     "y": 1488.6,
+     "n": 4,
+     "cx": 897.6,
+     "cy": 1488.6,
+     "r": 33.6,
+     "label": "Dom rajcy Hermana"
+    }
+   },
    "desc": [
     {
      "ch": "XI",
@@ -3417,6 +3751,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.2",
    "id": "dom_hermana"
   },
   "dom_wernhera": {
@@ -3424,11 +3759,19 @@ window.BIEL_DATA = {
    "parent": "wroclaw",
    "sheets": {
     "wroclaw": {
-     "x": 902,
-     "y": 1195
+     "x": 893.9,
+     "y": 1263.7
+    },
+    "mury": {
+     "x": 1334.4,
+     "y": 1584.0,
+     "n": 13,
+     "cx": 1334.4,
+     "cy": 1584.0,
+     "r": 33.6,
+     "label": "Dom pieczętarza przy Szewskiej"
     }
    },
-   "approx": "Ulica Szewska biegnie na wschód od Rynku; znacznik stoi umownie przy niej.",
    "desc": [
     {
      "ch": "XI",
@@ -3436,6 +3779,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.6",
    "id": "dom_wernhera"
   },
   "jatki": {
@@ -3443,11 +3787,19 @@ window.BIEL_DATA = {
    "parent": "wroclaw",
    "sheets": {
     "wroclaw": {
-     "x": 612,
-     "y": 1195
+     "x": 600.2,
+     "y": 1043.4
+    },
+    "mury": {
+     "x": 809.6,
+     "y": 1190.4,
+     "n": 16,
+     "cx": 809.6,
+     "cy": 1190.4,
+     "r": 33.6,
+     "label": "Jatki"
     }
    },
-   "approx": "Położenia jatek tekst nie podaje; znacznik stoi umownie na zachód od Rynku, przy dawnych Jatkach.",
    "desc": [
     {
      "ch": "XI",
@@ -3455,19 +3807,28 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.6",
    "id": "jatki"
   },
   "wieza": {
-   "name": "Wieża przy bramie (więzienie miejskie)",
-   "short": "Wieża",
+   "name": "Wieża przy Bramie Oławskiej (więzienie miejskie)",
+   "short": "Wieża przy Bramie Oławskiej",
    "parent": "wroclaw",
    "sheets": {
     "wroclaw": {
-     "x": 690,
-     "y": 1628
+     "x": 1353.0,
+     "y": 1556.5
+    },
+    "mury": {
+     "x": 2154.6,
+     "y": 2107.2,
+     "n": 14,
+     "cx": 2154.6,
+     "cy": 2107.2,
+     "r": 33.6,
+     "label": "Brama Oławska z wieżą (więzienie)"
     }
    },
-   "approx": "Wieża stoi „przy bramie wbudowana w mur”, ale brama nie jest nazwana. Znacznik stoi umownie przy bramie w stronę Świdnicy.",
    "desc": [
     {
      "ch": "XI",
@@ -3475,11 +3836,27 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.6",
    "id": "wieza"
   },
   "katownia": {
    "name": "Dom kata przy wieży",
    "parent": "wieza",
+   "sheets": {
+    "mury": {
+     "x": 1979.5,
+     "y": 2092.8,
+     "n": 15,
+     "cx": 1979.5,
+     "cy": 2092.8,
+     "r": 33.6,
+     "label": "Dom kata przy wieży"
+    },
+    "wroclaw": {
+     "x": 1255.0,
+     "y": 1548.5
+    }
+   },
    "desc": [
     {
      "ch": "XI",
@@ -3487,6 +3864,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "XI.6",
    "id": "katownia"
   },
   "sw_mikolaj": {
@@ -3496,6 +3874,10 @@ window.BIEL_DATA = {
     "wroclaw": {
      "x": 70,
      "y": 1030
+    },
+    "mury": {
+     "x": 60,
+     "y": 1552
     }
    },
    "approx": "Kościół stał na zachodnim krańcu miasta, poza arkuszem autora; znacznik stoi umownie przy drodze na zachód.",
@@ -3506,6 +3888,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.6",
    "id": "sw_mikolaj"
   },
   "plebania_pod_lasem": {
@@ -3524,6 +3907,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.3",
    "id": "plebania_pod_lasem"
   },
   "siwa_kopa": {
@@ -3531,8 +3915,8 @@ window.BIEL_DATA = {
    "parent": "vallis_silens",
    "sheets": {
     "kotlina": {
-     "x": 167,
-     "y": 153
+     "x": 170,
+     "y": 150
     }
    },
    "desc": [
@@ -3542,6 +3926,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.5",
    "id": "siwa_kopa"
   },
   "chelmsko": {
@@ -3560,6 +3945,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.2",
    "id": "chelmsko"
   },
   "kamienna_gora": {
@@ -3578,6 +3964,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.5",
    "id": "kamienna_gora"
   },
   "sleza_rzeka": {
@@ -3600,6 +3987,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "sleza_rzeka"
   },
   "bystrzyca_rzeka": {
@@ -3612,6 +4000,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.3",
    "id": "bystrzyca_rzeka"
   },
   "gluszyca_karczma": {
@@ -3619,8 +4008,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 1530,
-     "y": 612
+     "x": 1514,
+     "y": 606
     }
    },
    "desc": [
@@ -3635,6 +4024,7 @@ window.BIEL_DATA = {
      "text": "Przypis 7 (do słów Gniewosza „Sołtysem to ja jestem”): we wsiach zakładanych na prawie niemieckim sołtys otrzymywał zwykle, obok łanów wolnych od czynszu, prawo prowadzenia karczmy, młyna lub jatki."
     }
    ],
+   "first": "X.1",
    "id": "gluszyca_karczma"
   },
   "gluszyca_kuznia": {
@@ -3642,8 +4032,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 1650,
-     "y": 505
+     "x": 1668,
+     "y": 522
     }
    },
    "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
@@ -3654,6 +4044,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.1",
    "id": "gluszyca_kuznia"
   },
   "gluszyca_kosciol": {
@@ -3661,8 +4052,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 1612,
-     "y": 546
+     "x": 1624,
+     "y": 558
     }
    },
    "desc": [
@@ -3672,6 +4063,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.1",
    "id": "gluszyca_kosciol"
   },
   "gluszyca_chalupa_malgorzaty": {
@@ -3679,8 +4071,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 1712,
-     "y": 610
+     "x": 1742,
+     "y": 614
     }
    },
    "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
@@ -3691,6 +4083,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.1",
    "id": "gluszyca_chalupa_malgorzaty"
   },
   "gluszyca_dab": {
@@ -3698,11 +4091,10 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 1830,
-     "y": 650
+     "x": 1870,
+     "y": 576
     }
    },
-   "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
    "desc": [
     {
      "ch": "X",
@@ -3714,6 +4106,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.1",
    "id": "gluszyca_dab"
   },
   "gluszyca_zrebka": {
@@ -3721,8 +4114,8 @@ window.BIEL_DATA = {
    "parent": "gluszyca",
    "sheets": {
     "kotlina": {
-     "x": 2080,
-     "y": 758
+     "x": 2120,
+     "y": 736
     }
    },
    "approx": "Na schemacie Kotliny Cichej z „Żółci” tego miejsca nie ma; znacznik stoi umownie według opisu w rozdziale X.",
@@ -3733,6 +4126,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "X.6",
    "id": "gluszyca_zrebka"
   },
   "tilo_zagroda": {
@@ -3756,16 +4150,19 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "IX.6",
    "id": "tilo_zagroda"
   },
   "krakow": {
    "name": "Kraków",
    "far": true,
+   "first": "P.1",
    "id": "krakow"
   },
   "missen": {
    "name": "Miśnia",
    "far": true,
+   "first": "I.1",
    "id": "missen"
   },
   "piza": {
@@ -3786,11 +4183,13 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.1",
    "id": "piza"
   },
   "padwa": {
    "name": "Padwa",
    "far": true,
+   "first": "I.3",
    "id": "padwa"
   },
   "luzyce": {
@@ -3803,6 +4202,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "I.2",
    "id": "luzyce"
   },
   "tisnov": {
@@ -3820,6 +4220,7 @@ window.BIEL_DATA = {
      "text": "Przypis 6: klasztor cysterek Porta Coeli w Tišnovie na Morawach, ufundowany w 1233 r."
     }
    ],
+   "first": "II.4",
    "id": "tisnov"
   },
   "citeaux": {
@@ -3832,16 +4233,19 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "II.4",
    "id": "citeaux"
   },
   "ypres": {
    "name": "Ypres",
    "far": true,
+   "first": "V.2",
    "id": "ypres"
   },
   "gandawa": {
    "name": "Gandawa",
    "far": true,
+   "first": "V.2",
    "id": "gandawa"
   },
   "lipsk": {
@@ -3854,6 +4258,7 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.2",
    "id": "lipsk"
   },
   "poznan": {
@@ -3866,11 +4271,13 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "V.3",
    "id": "poznan"
   },
   "praga": {
    "name": "Praga",
    "far": true,
+   "first": "V.4",
    "id": "praga"
   },
   "ratyzbona": {
@@ -3883,16 +4290,19 @@ window.BIEL_DATA = {
     }
    ],
    "notes": [],
+   "first": "VIII.1",
    "id": "ratyzbona"
   },
   "rzym": {
    "name": "Rzym",
    "far": true,
+   "first": "VII.4",
    "id": "rzym"
   },
   "kolonia": {
    "name": "Kolonia",
    "far": true,
+   "first": "X.2",
    "id": "kolonia"
   },
   "wielkopolska": {
@@ -3981,7 +4391,8 @@ window.BIEL_DATA = {
     "ostrow",
     "swiety_krzyz",
     "piasek"
-   ]
+   ],
+   "incipit": "Wiosna nadeszła zwyczajnie. W Roku…"
   },
   {
    "id": "I.1",
@@ -4027,7 +4438,8 @@ window.BIEL_DATA = {
     "a_prezbiterium",
     "missen",
     "piza"
-   ]
+   ],
+   "incipit": "Stary pergamin pachnie inaczej niż…"
   },
   {
    "id": "I.2",
@@ -4078,7 +4490,8 @@ window.BIEL_DATA = {
     "a_mlyny_jaz",
     "wroclaw",
     "luzyce"
-   ]
+   ],
+   "incipit": "Delegacja z Ligoty przyszła po…"
   },
   {
    "id": "I.3",
@@ -4132,7 +4545,8 @@ window.BIEL_DATA = {
     "padwa",
     "a_obora",
     "a_skryptorium"
-   ]
+   ],
+   "incipit": "Zaczął pytać, a były to…"
   },
   {
    "id": "I.4",
@@ -4175,7 +4589,8 @@ window.BIEL_DATA = {
     "a_stodola",
     "a_obora",
     "ligota"
-   ]
+   ],
+   "incipit": "Pismo trzeba było napisać, bo…"
   },
   {
    "id": "I.5",
@@ -4209,7 +4624,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "a_portal"
-   ]
+   ],
+   "incipit": "Czystopis trzeba było zapieczętować, a…"
   },
   {
    "id": "I.6",
@@ -4257,7 +4673,8 @@ window.BIEL_DATA = {
     "rynek",
     "glogow",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Oficjał urzędował na Ostrowie Tumskim…"
   },
   {
    "id": "I.7",
@@ -4297,7 +4714,8 @@ window.BIEL_DATA = {
     "a_kosciol",
     "a_dormitorium",
     "ligota"
-   ]
+   ],
+   "incipit": "Wrócił na Piasek, kiedy kończono…"
   },
   {
    "id": "II.1",
@@ -4331,7 +4749,8 @@ window.BIEL_DATA = {
     "trzebnica",
     "swiety_krzyz",
     "glogow"
-   ]
+   ],
+   "incipit": "Święta Jadwiga wyszła z Wrocławia…"
   },
   {
    "id": "II.2",
@@ -4381,7 +4800,8 @@ window.BIEL_DATA = {
     "scinawa",
     "olesnica",
     "dwor_biskupi"
-   ]
+   ],
+   "incipit": "Celerarz Bogusz wrócił z targu…"
   },
   {
    "id": "II.3",
@@ -4422,7 +4842,8 @@ window.BIEL_DATA = {
     "brakteat",
     "srebrny relikwiarz w kształcie ręki"
    ],
-   "mentioned": []
+   "mentioned": [],
+   "incipit": "Dwór biskupi pachniał rybą, bo…"
   },
   {
    "id": "II.4",
@@ -4478,7 +4899,8 @@ window.BIEL_DATA = {
     "otmuchow",
     "milicz",
     "trzebnica"
-   ]
+   ],
+   "incipit": "Biskup Jan przyjął go w…"
   },
   {
    "id": "II.5",
@@ -4521,7 +4943,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "padwa",
     "missen"
-   ]
+   ],
+   "incipit": "Nie poszedł od razu do…"
   },
   {
    "id": "II.6",
@@ -4559,7 +4982,8 @@ window.BIEL_DATA = {
     "scinawa",
     "kancelaria",
     "missen"
-   ]
+   ],
+   "incipit": "— Kazał ci? — zapytał…"
   },
   {
    "id": "II.7",
@@ -4593,7 +5017,8 @@ window.BIEL_DATA = {
     "krakow",
     "padwa",
     "ostrow"
-   ]
+   ],
+   "incipit": "W nocy nie mógł spać…"
   },
   {
    "id": "III.1",
@@ -4636,7 +5061,8 @@ window.BIEL_DATA = {
     "fara_magdalena",
     "ligota",
     "sleza_rzeka"
-   ]
+   ],
+   "incipit": "Kiedy w poniedziałek po świętym…"
   },
   {
    "id": "III.2",
@@ -4672,7 +5098,8 @@ window.BIEL_DATA = {
     "swiety_krzyz",
     "ostrow",
     "padwa"
-   ]
+   ],
+   "incipit": "Izba protonotariusza była mała, ciepła…"
   },
   {
    "id": "III.3",
@@ -4719,7 +5146,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "dwor_biskupi",
     "glogow"
-   ]
+   ],
+   "incipit": "Ktoś się znalazł w sobotę…"
   },
   {
    "id": "III.4",
@@ -4761,7 +5189,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "swiety_krzyz",
     "legnica"
-   ]
+   ],
+   "incipit": "Od środka stary zamek był…"
   },
   {
    "id": "III.5",
@@ -4801,7 +5230,8 @@ window.BIEL_DATA = {
     "olawa",
     "dwor_biskupi",
     "padwa"
-   ]
+   ],
+   "incipit": "Skrzynie stały w piwnicy pod…"
   },
   {
    "id": "III.6",
@@ -4836,7 +5266,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "a_zakrystia",
     "piza"
-   ]
+   ],
+   "incipit": "Kuncz przychodził na Piasek wieczorami…"
   },
   {
    "id": "III.7",
@@ -4885,7 +5316,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "ostrow"
-   ]
+   ],
+   "incipit": "We wtorek przed świętym Marcinem…"
   },
   {
    "id": "IV.1",
@@ -4930,7 +5362,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "olbin",
     "ligota"
-   ]
+   ],
+   "incipit": "To nie był wiardunek. Kmieć…"
   },
   {
    "id": "IV.2",
@@ -4966,7 +5399,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "a_brama"
-   ]
+   ],
+   "incipit": "Koleiny pod nowym murem zamarzły…"
   },
   {
    "id": "IV.3",
@@ -5005,7 +5439,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "kancelaria"
-   ]
+   ],
+   "incipit": "Cisza trwała krótko. Dietrichowi wydała…"
   },
   {
    "id": "IV.4",
@@ -5047,7 +5482,8 @@ window.BIEL_DATA = {
     "laznia",
     "trzebnica",
     "legnica"
-   ]
+   ],
+   "incipit": "Do Piasku nie wrócił. Brama…"
   },
   {
    "id": "IV.5",
@@ -5088,7 +5524,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "kancelaria"
-   ]
+   ],
+   "incipit": "Rano, po prymie, wypuszczono duchownych…"
   },
   {
    "id": "IV.6",
@@ -5131,7 +5568,8 @@ window.BIEL_DATA = {
     "fara_magdalena",
     "mlyn_olawa",
     "a_obora"
-   ]
+   ],
+   "incipit": "W piątek przyjechał notariusz oficjała…"
   },
   {
    "id": "IV.7",
@@ -5174,7 +5612,8 @@ window.BIEL_DATA = {
     "padwa",
     "krakow",
     "wroclaw"
-   ]
+   ],
+   "incipit": "W sobotę rano, zanim wyszedł…"
   },
   {
    "id": "V.1",
@@ -5215,7 +5654,8 @@ window.BIEL_DATA = {
     "dzielnica_zydowska",
     "milicz",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Lewka szukano przez tydzień: w…"
   },
   {
    "id": "V.2",
@@ -5266,7 +5706,8 @@ window.BIEL_DATA = {
     "fara_magdalena",
     "piasek",
     "a_komora_dietricha"
-   ]
+   ],
+   "incipit": "Brama zamknęła się za nimi…"
   },
   {
    "id": "V.3",
@@ -5309,7 +5750,8 @@ window.BIEL_DATA = {
     "a_brama",
     "a_dom_opata",
     "fara_magdalena"
-   ]
+   ],
+   "incipit": "Głogów był porządniejszy od Wrocławia…"
   },
   {
    "id": "V.4",
@@ -5354,7 +5796,8 @@ window.BIEL_DATA = {
     "padwa",
     "praga",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Książę głogowski przyjął ich w…"
   },
   {
    "id": "V.5",
@@ -5391,7 +5834,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "laznia",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Lutek przyszedł wieczorem do kamienicy…"
   },
   {
    "id": "V.6",
@@ -5438,7 +5882,8 @@ window.BIEL_DATA = {
     "kaplica_nmp",
     "piasek",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Przez pół nocy, na krawędzi…"
   },
   {
    "id": "VI.1",
@@ -5488,7 +5933,8 @@ window.BIEL_DATA = {
     "kancelaria",
     "dom_agnieszki",
     "a_stodola"
-   ]
+   ],
+   "incipit": "Posłowie wrócili z Głogowa w…"
   },
   {
    "id": "VI.2",
@@ -5527,7 +5973,8 @@ window.BIEL_DATA = {
     "dom_agnieszki",
     "glogow",
     "fara_magdalena"
-   ]
+   ],
+   "incipit": "Ławy chlebowe stały na środku…"
   },
   {
    "id": "VI.3",
@@ -5569,7 +6016,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "kancelaria",
     "missen"
-   ]
+   ],
+   "incipit": "W czwartek słońce przez cały…"
   },
   {
    "id": "VI.4",
@@ -5610,7 +6058,8 @@ window.BIEL_DATA = {
     "piasek",
     "fara_magdalena",
     "dwor_biskupi"
-   ]
+   ],
+   "incipit": "Otworzyła mu sama kluczem z…"
   },
   {
    "id": "VI.5",
@@ -5649,7 +6098,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "piasek",
     "glogow"
-   ]
+   ],
+   "incipit": "Dziewczynkę posłała na górę jednym…"
   },
   {
    "id": "VI.6",
@@ -5698,7 +6148,8 @@ window.BIEL_DATA = {
     "glogow",
     "kancelaria",
     "piasek"
-   ]
+   ],
+   "incipit": "W sobotę suchych dni biskup…"
   },
   {
    "id": "VI.7",
@@ -5733,7 +6184,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "piasek"
-   ]
+   ],
+   "incipit": "Skrzynię wyniósł syn Gertrudy, długi…"
   },
   {
    "id": "VII.1",
@@ -5777,7 +6229,8 @@ window.BIEL_DATA = {
     "a_spizarnia",
     "a_brama",
     "most_piaskowy"
-   ]
+   ],
+   "incipit": "Bogusz przyszedł do komory za…"
   },
   {
    "id": "VII.2",
@@ -5819,7 +6272,8 @@ window.BIEL_DATA = {
     "vallis_silens",
     "kancelaria",
     "padwa"
-   ]
+   ],
+   "incipit": "Dwór, który opactwo z Lubiąża…"
   },
   {
    "id": "VII.3",
@@ -5855,7 +6309,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "kancelaria"
-   ]
+   ],
+   "incipit": "Czeladź zjadła w piątek wieprzowinę…"
   },
   {
    "id": "VII.4",
@@ -5897,7 +6352,8 @@ window.BIEL_DATA = {
     "opole",
     "raciborz",
     "rzym"
-   ]
+   ],
+   "incipit": "Na Ostrowie między świętami było…"
   },
   {
    "id": "VII.5",
@@ -5942,7 +6398,8 @@ window.BIEL_DATA = {
     "glogow",
     "milicz",
     "cmentarz_farny"
-   ]
+   ],
+   "incipit": "Heinczek, syn protonotariusza, przyszedł na…"
   },
   {
    "id": "VII.6",
@@ -5978,7 +6435,8 @@ window.BIEL_DATA = {
     "izba_protonotariusza",
     "dom_agnieszki",
     "kancelaria"
-   ]
+   ],
+   "incipit": "W piątek po Trzech Królach…"
   },
   {
    "id": "VII.7",
@@ -6010,7 +6468,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "fara_magdalena"
-   ]
+   ],
+   "incipit": "W sobotę po prymie Dietrich…"
   },
   {
    "id": "VIII.1",
@@ -6056,7 +6515,8 @@ window.BIEL_DATA = {
     "vallis_silens",
     "fara_magdalena",
     "swidnica"
-   ]
+   ],
+   "incipit": "Kartkę od magistra Bogusz przełożył…"
   },
   {
    "id": "VIII.2",
@@ -6101,7 +6561,8 @@ window.BIEL_DATA = {
     "ligota",
     "kancelaria",
     "vallis_silens"
-   ]
+   ],
+   "incipit": "Rejestr Bogusz niósł pod pachą…"
   },
   {
    "id": "VIII.3",
@@ -6142,7 +6603,8 @@ window.BIEL_DATA = {
     "dom_agnieszki",
     "padwa",
     "rzym"
-   ]
+   ],
+   "incipit": "We wtorek po prymie skrzynia…"
   },
   {
    "id": "VIII.4",
@@ -6183,7 +6645,8 @@ window.BIEL_DATA = {
     "missen",
     "padwa",
     "kancelaria"
-   ]
+   ],
+   "incipit": "W sobotę przed nieszporami Dietrich…"
   },
   {
    "id": "VIII.5",
@@ -6232,7 +6695,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "glogow"
-   ]
+   ],
+   "incipit": "Na Gromniczną świece poświęcono przed…"
   },
   {
    "id": "IX.1",
@@ -6281,7 +6745,8 @@ window.BIEL_DATA = {
     "legnica",
     "henrykow",
     "raciborz"
-   ]
+   ],
+   "incipit": "Od świtu w izbie przy…"
   },
   {
    "id": "IX.2",
@@ -6333,7 +6798,8 @@ window.BIEL_DATA = {
     "milicz",
     "padwa",
     "kancelaria"
-   ]
+   ],
+   "incipit": "Juki Dietrich wiązał sam, uznawszy…"
   },
   {
    "id": "IX.3",
@@ -6378,7 +6844,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "padwa"
-   ]
+   ],
+   "incipit": "Pierwszego dnia drogi Dietrich dowiedział…"
   },
   {
    "id": "IX.4",
@@ -6416,7 +6883,8 @@ window.BIEL_DATA = {
     "praga",
     "wroclaw",
     "gluszyca"
-   ]
+   ],
+   "incipit": "Karczma stała przy drodze za…"
   },
   {
    "id": "IX.5",
@@ -6457,7 +6925,8 @@ window.BIEL_DATA = {
     "kancelaria",
     "bystrzyca_rzeka",
     "praga"
-   ]
+   ],
+   "incipit": "Bartek od soli opowiadał tę…"
   },
   {
    "id": "IX.6",
@@ -6507,7 +6976,8 @@ window.BIEL_DATA = {
     "lawy_chlebowe",
     "ratusz",
     "missen"
-   ]
+   ],
+   "incipit": "Trzeciego dnia skończyła się równina…"
   },
   {
    "id": "X.1",
@@ -6562,7 +7032,8 @@ window.BIEL_DATA = {
     "dwor_lubiaski",
     "padwa",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Wieś usłyszała ich, zanim oni…"
   },
   {
    "id": "X.2",
@@ -6610,7 +7081,8 @@ window.BIEL_DATA = {
     "missen",
     "kolonia",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Pod górę szli o suchym…"
   },
   {
    "id": "X.3",
@@ -6650,7 +7122,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "piasek",
     "vallis_silens"
-   ]
+   ],
+   "incipit": "W sobotę kowal odkopał drzwi…"
   },
   {
    "id": "X.4",
@@ -6686,7 +7159,8 @@ window.BIEL_DATA = {
    ],
    "mentioned": [
     "nysa"
-   ]
+   ],
+   "incipit": "Chałupa stała za kościołem, trzydzieści…"
   },
   {
    "id": "X.5",
@@ -6726,7 +7200,8 @@ window.BIEL_DATA = {
     "vallis_silens",
     "kancelaria",
     "wroclaw"
-   ]
+   ],
+   "incipit": "Po południu pleban zabrał Sulka…"
   },
   {
    "id": "X.6",
@@ -6769,7 +7244,8 @@ window.BIEL_DATA = {
     "wroclaw",
     "swidnica",
     "vallis_silens"
-   ]
+   ],
+   "incipit": "W niedzielę po mszy, na…"
   },
   {
    "id": "X.7",
@@ -6804,7 +7280,8 @@ window.BIEL_DATA = {
     "wroclaw",
     "gluszyca_karczma",
     "gluszyca_kuznia"
-   ]
+   ],
+   "incipit": "Wit wrócił od płotu, zza…"
   },
   {
    "id": "XI.1",
@@ -6846,7 +7323,8 @@ window.BIEL_DATA = {
     "zamek",
     "kancelaria",
     "ostrow_izba_przy_sieni"
-   ]
+   ],
+   "incipit": "Po magistra Heidenreich posyłał trzy…"
   },
   {
    "id": "XI.2",
@@ -6897,7 +7375,8 @@ window.BIEL_DATA = {
     "missen",
     "padwa",
     "piasek"
-   ]
+   ],
+   "incipit": "W niedzielę po nieszporach przy…"
   },
   {
    "id": "XI.3",
@@ -6937,7 +7416,8 @@ window.BIEL_DATA = {
     "zamek",
     "kancelaria",
     "gluszyca"
-   ]
+   ],
+   "incipit": "W środę, w dzień świętego…"
   },
   {
    "id": "XI.4",
@@ -6980,7 +7460,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "a_kuchnia",
     "glogow"
-   ]
+   ],
+   "incipit": "W Popielec rano opat sypał…"
   },
   {
    "id": "XI.5",
@@ -7018,7 +7499,8 @@ window.BIEL_DATA = {
    "mentioned": [
     "a_zakrystia",
     "a_brama"
-   ]
+   ],
+   "incipit": "Skarbiec Piasku mieścił się za…"
   },
   {
    "id": "XI.6",
@@ -7060,7 +7542,8 @@ window.BIEL_DATA = {
     "jatki",
     "kancelaria",
     "glogow"
-   ]
+   ],
+   "incipit": "Konrad położył spis na stole…"
   },
   {
    "id": "XI.7",
@@ -7105,7 +7588,8 @@ window.BIEL_DATA = {
     "fara_magdalena",
     "rynek",
     "glogow"
-   ]
+   ],
+   "incipit": "Wieża stała przy bramie wbudowana…"
   },
   {
    "id": "XI.8",
@@ -7146,7 +7630,8 @@ window.BIEL_DATA = {
     "fara_magdalena",
     "glogow",
     "rzym"
-   ]
+   ],
+   "incipit": "Nazajutrz po świętej Gertrudzie z…"
   }
  ],
  "characters": {
@@ -9588,6 +10073,12 @@ window.BIEL_DATA = {
     "scinawa",
     "glogow"
    ],
+   "stopScenes": [
+    "V.2",
+    "V.2",
+    "V.2",
+    "V.3"
+   ],
    "labels": [
     {
      "place": "sroda",
@@ -9617,6 +10108,14 @@ window.BIEL_DATA = {
     "karczma_trakt",
     "tilo_zagroda",
     "gluszyca"
+   ],
+   "stopScenes": [
+    "IX.2",
+    "IX.3",
+    "IX.3",
+    "IX.4",
+    "IX.6",
+    "X.1"
    ],
    "labels": [
     {
@@ -9746,7 +10245,8 @@ window.BIEL_DATA = {
     "jutrznię",
     "jutrznią"
    ],
-   "def": "Modlitwa nocna, odmawiana przed świtem."
+   "def": "Modlitwa nocna, odmawiana przed świtem.",
+   "group": "Godziny"
   },
   {
    "term": "Pryma",
@@ -9757,7 +10257,8 @@ window.BIEL_DATA = {
     "prymę",
     "prymą"
    ],
-   "def": "O wschodzie słońca; w grudniu i styczniu około ósmej rano."
+   "def": "O wschodzie słońca; w grudniu i styczniu około ósmej rano.",
+   "group": "Godziny"
   },
   {
    "term": "Tercja",
@@ -9767,7 +10268,8 @@ window.BIEL_DATA = {
     "tercję",
     "tercją"
    ],
-   "def": "Przed południem."
+   "def": "Przed południem.",
+   "group": "Godziny"
   },
   {
    "term": "Seksta",
@@ -9778,7 +10280,8 @@ window.BIEL_DATA = {
     "sekstę",
     "sekstą"
    ],
-   "def": "W południe."
+   "def": "W południe.",
+   "group": "Godziny"
   },
   {
    "term": "Nona",
@@ -9789,7 +10292,8 @@ window.BIEL_DATA = {
     "nonę",
     "noną"
    ],
-   "def": "Dziewiąta godzina dnia liczona od wschodu słońca; w grudniu około drugiej po południu."
+   "def": "Dziewiąta godzina dnia liczona od wschodu słońca; w grudniu około drugiej po południu.",
+   "group": "Godziny"
   },
   {
    "term": "Nieszpory",
@@ -9800,7 +10304,8 @@ window.BIEL_DATA = {
     "nieszporami",
     "nieszporom"
    ],
-   "def": "Późnym popołudniem, przed zachodem słońca; w grudniu około trzeciej. Porą nieszporów zamykano też bramy miejskie."
+   "def": "Późnym popołudniem, przed zachodem słońca; w grudniu około trzeciej. Porą nieszporów zamykano też bramy miejskie.",
+   "group": "Godziny"
   },
   {
    "term": "Kompleta",
@@ -9811,7 +10316,8 @@ window.BIEL_DATA = {
     "kompletę",
     "kompletą"
    ],
-   "def": "Ostatnia modlitwa dnia, przed snem. Miała co dzień te same psalmy, więc duchowni znali ją na pamięć."
+   "def": "Ostatnia modlitwa dnia, przed snem. Miała co dzień te same psalmy, więc duchowni znali ją na pamięć.",
+   "group": "Godziny"
   },
   {
    "term": "Brakteat",
@@ -9824,7 +10330,8 @@ window.BIEL_DATA = {
     "brakteatem",
     "brakteatu"
    ],
-   "def": "Cienka, jednostronnie bita moneta srebrna, w XIII wieku podstawowy pieniądz Śląska. Brakteaty łatwo się gięły i pękały, a srebra było w nich z roku na rok mniej, dlatego przy większych sumach ważono je, zamiast liczyć."
+   "def": "Cienka, jednostronnie bita moneta srebrna, w XIII wieku podstawowy pieniądz Śląska. Brakteaty łatwo się gięły i pękały, a srebra było w nich z roku na rok mniej, dlatego przy większych sumach ważono je, zamiast liczyć.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Denar",
@@ -9835,7 +10342,8 @@ window.BIEL_DATA = {
     "denarów",
     "denarami"
    ],
-   "def": "Najdrobniejsza moneta i najmniejsza jednostka rachunku; śląskie brakteaty były denarami."
+   "def": "Najdrobniejsza moneta i najmniejsza jednostka rachunku; śląskie brakteaty były denarami.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Grzywna",
@@ -9848,7 +10356,8 @@ window.BIEL_DATA = {
     "grzywnach",
     "grzywnami"
    ],
-   "def": "Jednostka wagi i rachunku (łac. marca), nie moneta: około pół funta srebra, na Śląsku mniej więcej 196 gramów."
+   "def": "Jednostka wagi i rachunku (łac. marca), nie moneta: około pół funta srebra, na Śląsku mniej więcej 196 gramów.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Kwartnik",
@@ -9858,7 +10367,8 @@ window.BIEL_DATA = {
     "kwartników",
     "kwartnika"
    ],
-   "def": "Gruba, dwustronna moneta srebrna wysokiej próby, wprowadzona reformą Henryka III głogowskiego. W książce mówi się o nich po prostu „głogowskie” albo „grube”."
+   "def": "Gruba, dwustronna moneta srebrna wysokiej próby, wprowadzona reformą Henryka III głogowskiego. W książce mówi się o nich po prostu „głogowskie” albo „grube”.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Łan",
@@ -9870,7 +10380,8 @@ window.BIEL_DATA = {
     "łanach",
     "łanami"
    ],
-   "def": "Jednostka gruntu chłopskiego. Łan frankoński, typowy dla wsi na prawie niemieckim, liczył około 24 hektarów."
+   "def": "Jednostka gruntu chłopskiego. Łan frankoński, typowy dla wsi na prawie niemieckim, liczył około 24 hektarów.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Maldrat",
@@ -9879,7 +10390,8 @@ window.BIEL_DATA = {
     "maldratu",
     "maldratem"
    ],
-   "def": "Stała danina zbożowa z łanu, płacona w równych częściach żytem, pszenicą i owsem zamiast dziesięciny snopowej."
+   "def": "Stała danina zbożowa z łanu, płacona w równych częściach żytem, pszenicą i owsem zamiast dziesięciny snopowej.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Skojec",
@@ -9889,7 +10401,8 @@ window.BIEL_DATA = {
     "skojców",
     "skojca"
    ],
-   "def": "Dwudziesta czwarta część grzywny (łac. scotus); na wiardunek szło sześć skojców."
+   "def": "Dwudziesta czwarta część grzywny (łac. scotus); na wiardunek szło sześć skojców.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Uncja",
@@ -9899,7 +10412,8 @@ window.BIEL_DATA = {
     "uncji",
     "uncję"
    ],
-   "def": "Jednostka wagi drogich towarów, na przykład barwników; w każdym mieście ważyła trochę inaczej."
+   "def": "Jednostka wagi drogich towarów, na przykład barwników; w każdym mieście ważyła trochę inaczej.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Wiardunek",
@@ -9909,7 +10423,8 @@ window.BIEL_DATA = {
     "wiardunki",
     "wiardunków"
    ],
-   "def": "Czwarta część grzywny (łac. ferto)."
+   "def": "Czwarta część grzywny (łac. ferto).",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Korzec",
@@ -9919,7 +10434,8 @@ window.BIEL_DATA = {
     "korce",
     "korców"
    ],
-   "def": "Miara zboża i innych towarów sypkich, w każdym mieście nieco inna."
+   "def": "Miara zboża i innych towarów sypkich, w każdym mieście nieco inna.",
+   "group": "Miary, wagi i pieniądze"
   },
   {
    "term": "Armarius",
@@ -9929,7 +10445,8 @@ window.BIEL_DATA = {
     "armariusem",
     "armariusowi"
    ],
-   "def": "Kanonik albo mnich odpowiedzialny za księgi klasztoru, ich przechowywanie i przepisywanie; w wielu domach prowadził także śpiew w chórze."
+   "def": "Kanonik albo mnich odpowiedzialny za księgi klasztoru, ich przechowywanie i przepisywanie; w wielu domach prowadził także śpiew w chórze.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Balwierz",
@@ -9939,7 +10456,8 @@ window.BIEL_DATA = {
     "balwierze",
     "balwierzem"
    ],
-   "def": "Rzemieślnik prowadzący łaźnię albo pracujący w niej: golił, strzygł, stawiał bańki, puszczał krew i opatrywał drobne rany."
+   "def": "Rzemieślnik prowadzący łaźnię albo pracujący w niej: golił, strzygł, stawiał bańki, puszczał krew i opatrywał drobne rany.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Celerarz",
@@ -9949,7 +10467,8 @@ window.BIEL_DATA = {
     "celerarzem",
     "celerarzowi"
    ],
-   "def": "Zakonnik zarządzający spiżarnią, spichrzem i gospodarką klasztoru."
+   "def": "Zakonnik zarządzający spiżarnią, spichrzem i gospodarką klasztoru.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Furtian",
@@ -9960,7 +10479,8 @@ window.BIEL_DATA = {
     "furtianowi",
     "furtianie"
    ],
-   "def": "Zakonnik pilnujący furty klasztornej: wpuszcza gości, odprawia ubogich i wie, kto wszedł i kto wyszedł."
+   "def": "Zakonnik pilnujący furty klasztornej: wpuszcza gości, odprawia ubogich i wie, kto wszedł i kto wyszedł.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Kasztelan",
@@ -9970,7 +10490,8 @@ window.BIEL_DATA = {
     "kasztelanem",
     "kasztelanowi"
    ],
-   "def": "Urzędnik książęcy zarządzający grodem i okręgiem wokół niego."
+   "def": "Urzędnik książęcy zarządzający grodem i okręgiem wokół niego.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Konwers",
@@ -9980,7 +10501,8 @@ window.BIEL_DATA = {
     "konwersi",
     "konwersów"
    ],
-   "def": "Brat zakonny, który nie był duchownym i pracował w gospodarstwie klasztoru; u cystersów konwersi prowadzili dwory, spichrze i składy."
+   "def": "Brat zakonny, który nie był duchownym i pracował w gospodarstwie klasztoru; u cystersów konwersi prowadzili dwory, spichrze i składy.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Kustosz",
@@ -9990,7 +10512,8 @@ window.BIEL_DATA = {
     "kustoszem",
     "kustoszowi"
    ],
-   "def": "Zakonnik pilnujący kościoła, jego sprzętów i skarbca."
+   "def": "Zakonnik pilnujący kościoła, jego sprzętów i skarbca.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Marszałek",
@@ -9999,7 +10522,8 @@ window.BIEL_DATA = {
     "marszałka",
     "marszałkiem"
    ],
-   "def": "Marszałek nadworny, dostojnik dworu książęcego, czuwający nad porządkiem na dworze i nad tym, kto ma dostęp do księcia."
+   "def": "Marszałek nadworny, dostojnik dworu książęcego, czuwający nad porządkiem na dworze i nad tym, kto ma dostęp do księcia.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Oficjał",
@@ -10010,7 +10534,8 @@ window.BIEL_DATA = {
     "oficjałowi",
     "oficjale"
    ],
-   "def": "Sędzia sądu biskupiego, orzekający w imieniu biskupa; jego sąd nazywano konsystorskim."
+   "def": "Sędzia sądu biskupiego, orzekający w imieniu biskupa; jego sąd nazywano konsystorskim.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Pieczętarz",
@@ -10020,7 +10545,8 @@ window.BIEL_DATA = {
     "pieczętarzem",
     "pieczętarzowi"
    ],
-   "def": "Urzędnik kancelarii, który przechowywał pieczęć, grzał wosk i przykładał tłok do dokumentów."
+   "def": "Urzędnik kancelarii, który przechowywał pieczęć, grzał wosk i przykładał tłok do dokumentów.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Pleban",
@@ -10031,7 +10557,8 @@ window.BIEL_DATA = {
     "plebanowi",
     "plebani"
    ],
-   "def": "Proboszcz parafii."
+   "def": "Proboszcz parafii.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Prokurator",
@@ -10040,7 +10567,8 @@ window.BIEL_DATA = {
     "prokuratora",
     "prokuratorem"
    ],
-   "def": "Pełnomocnik instytucji kościelnej w sprawach sądowych i majątkowych."
+   "def": "Pełnomocnik instytucji kościelnej w sprawach sądowych i majątkowych.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Protonotariusz",
@@ -10050,7 +10578,8 @@ window.BIEL_DATA = {
     "protonotariuszem",
     "protonotariuszowi"
    ],
-   "def": "Kierownik kancelarii książęcej (łac. prothonotarius), odpowiedzialny za redakcję i wystawianie dokumentów."
+   "def": "Kierownik kancelarii książęcej (łac. prothonotarius), odpowiedzialny za redakcję i wystawianie dokumentów.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Przeor",
@@ -10060,7 +10589,8 @@ window.BIEL_DATA = {
     "przeorem",
     "przeorowi"
    ],
-   "def": "Zastępca opata."
+   "def": "Zastępca opata.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Rajca",
@@ -10072,7 +10602,8 @@ window.BIEL_DATA = {
     "rajcę",
     "rajcą"
    ],
-   "def": "Członek rady miejskiej (łac. consul). Radę wrocławską odnawiano co roku w Środę Popielcową: ustępujący rajcy wskazywali następców, a książę zatwierdzał ich listę."
+   "def": "Członek rady miejskiej (łac. consul). Radę wrocławską odnawiano co roku w Środę Popielcową: ustępujący rajcy wskazywali następców, a książę zatwierdzał ich listę.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Sołtys",
@@ -10084,7 +10615,8 @@ window.BIEL_DATA = {
     "sołtysi",
     "sołtysów"
    ],
-   "def": "Zarządca wsi lokowanej na prawie niemieckim, zwykle potomek zasadźcy, który tę wieś założył."
+   "def": "Zarządca wsi lokowanej na prawie niemieckim, zwykle potomek zasadźcy, który tę wieś założył.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Wójt",
@@ -10094,7 +10626,8 @@ window.BIEL_DATA = {
     "wójtem",
     "wójtowi"
    ],
-   "def": "Dziedziczny sędzia książęcy w mieście lokowanym na prawie niemieckim; sądził z ławnikami sprawy mieszczan i prowadził więzienie miejskie."
+   "def": "Dziedziczny sędzia książęcy w mieście lokowanym na prawie niemieckim; sądził z ławnikami sprawy mieszczan i prowadził więzienie miejskie.",
+   "group": "Ludzie i urzędy"
   },
   {
    "term": "Dziesięcina",
@@ -10105,7 +10638,8 @@ window.BIEL_DATA = {
     "dziesięciną",
     "dziesięcin"
    ],
-   "def": "Dziesiąta część plonów należna Kościołowi. Dziesięcinę wielką brano ze zboża, małą z przychówku, czyli z cieląt, jagniąt i prosiąt."
+   "def": "Dziesiąta część plonów należna Kościołowi. Dziesięcinę wielką brano ze zboża, małą z przychówku, czyli z cieląt, jagniąt i prosiąt.",
+   "group": "Klasztor i Kościół"
   },
   {
    "term": "Kanonik regularny",
@@ -10115,7 +10649,8 @@ window.BIEL_DATA = {
     "kanonicy regularni",
     "kanoników regularnych"
    ],
-   "def": "Duchowny żyjący we wspólnocie według reguły świętego Augustyna. Z mnichem łączyła go reguła, różniło to, że wychodził w świat: do parafii, po dziesięciny i do sądów."
+   "def": "Duchowny żyjący we wspólnocie według reguły świętego Augustyna. Z mnichem łączyła go reguła, różniło to, że wychodził w świat: do parafii, po dziesięciny i do sądów.",
+   "group": "Klasztor i Kościół"
   },
   {
    "term": "Kapituła",
@@ -10126,7 +10661,8 @@ window.BIEL_DATA = {
     "kapitułę",
     "kapitułą"
    ],
-   "def": "Codzienne zebranie wspólnoty w sali kapitularnej, po prymie; kapitułą nazywano też kolegium kanoników przy katedrze albo kolegiacie."
+   "def": "Codzienne zebranie wspólnoty w sali kapitularnej, po prymie; kapitułą nazywano też kolegium kanoników przy katedrze albo kolegiacie.",
+   "group": "Klasztor i Kościół"
   },
   {
    "term": "Prebenda",
@@ -10136,7 +10672,8 @@ window.BIEL_DATA = {
     "prebendę",
     "prebendą"
    ],
-   "def": "Stały dochód przypisany do urzędu kościelnego, zwłaszcza do stanowiska kanonika; pisarze kancelarii książęcej dostawali je często w kolegiacie Świętego Krzyża we Wrocławiu."
+   "def": "Stały dochód przypisany do urzędu kościelnego, zwłaszcza do stanowiska kanonika; pisarze kancelarii książęcej dostawali je często w kolegiacie Świętego Krzyża we Wrocławiu.",
+   "group": "Klasztor i Kościół"
   },
   {
    "term": "Rokieta",
@@ -10146,7 +10683,8 @@ window.BIEL_DATA = {
     "rokietę",
     "rokiecie"
    ],
-   "def": "Biała lniana szata sięgająca kolan, noszona między innymi przez kanoników regularnych."
+   "def": "Biała lniana szata sięgająca kolan, noszona między innymi przez kanoników regularnych.",
+   "group": "Klasztor i Kościół"
   },
   {
    "term": "Atrament galasowy",
@@ -10155,7 +10693,8 @@ window.BIEL_DATA = {
     "atramentu galasowego",
     "atramentem galasowym"
    ],
-   "def": "Atrament z galasów, czyli narośli na liściach i gałązkach dębu, z dodatkiem koperwasu i gumy arabskiej. Świeżo położony jest blady i ciemnieje na pergaminie po kilku godzinach."
+   "def": "Atrament z galasów, czyli narośli na liściach i gałązkach dębu, z dodatkiem koperwasu i gumy arabskiej. Świeżo położony jest blady i ciemnieje na pergaminie po kilku godzinach.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Aurypigment",
@@ -10164,7 +10703,8 @@ window.BIEL_DATA = {
     "aurypigmentu",
     "aurypigmentem"
    ],
-   "def": "Siarczek arsenu, jaskrawożółty minerał o złotym połysku, zwany złotem biedaków; iluminatorzy kładli go zamiast złota płatkowego. Silnie trujący."
+   "def": "Siarczek arsenu, jaskrawożółty minerał o złotym połysku, zwany złotem biedaków; iluminatorzy kładli go zamiast złota płatkowego. Silnie trujący.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Formularz",
@@ -10173,7 +10713,8 @@ window.BIEL_DATA = {
     "formularza",
     "formularzem"
    ],
-   "def": "Zbiór wzorów dokumentów i listów, z którego kancelaria korzystała przy pisaniu nowych."
+   "def": "Zbiór wzorów dokumentów i listów, z którego kancelaria korzystała przy pisaniu nowych.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Koroboracja",
@@ -10183,7 +10724,8 @@ window.BIEL_DATA = {
     "koroborację",
     "koroboracją"
    ],
-   "def": "Formuła na końcu dokumentu (łac. corroboratio, umocnienie), zapowiadająca jego uwierzytelnienie pieczęcią."
+   "def": "Formuła na końcu dokumentu (łac. corroboratio, umocnienie), zapowiadająca jego uwierzytelnienie pieczęcią.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Minuta",
@@ -10192,7 +10734,8 @@ window.BIEL_DATA = {
     "minuty",
     "minutę"
    ],
-   "def": "Brudnopis dokumentu, spisywany przed wygotowaniem czystopisu."
+   "def": "Brudnopis dokumentu, spisywany przed wygotowaniem czystopisu.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Mizdra",
@@ -10201,7 +10744,8 @@ window.BIEL_DATA = {
     "mizdry",
     "mizdrę"
    ],
-   "def": "Podskórna warstwa skóry zwierzęcej, zdzierana przy wyprawianiu; gotowana dawała klej, którego używali także iluminatorzy."
+   "def": "Podskórna warstwa skóry zwierzęcej, zdzierana przy wyprawianiu; gotowana dawała klej, którego używali także iluminatorzy.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Palimpsest",
@@ -10210,7 +10754,8 @@ window.BIEL_DATA = {
     "palimpsestu",
     "palimpsesty"
    ],
-   "def": "Pergamin, z którego zeskrobano albo zmyto dawne pismo, żeby napisać na nim nowe."
+   "def": "Pergamin, z którego zeskrobano albo zmyto dawne pismo, żeby napisać na nim nowe.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Rasura",
@@ -10221,7 +10766,8 @@ window.BIEL_DATA = {
     "rasurę",
     "rasurą"
    ],
-   "def": "Miejsce w dokumencie, z którego usunięto pismo nożem i pumeksem (łac. radere, skrobać). Prawo kanoniczne wymieniało rasurę wśród pierwszych oznak fałszerstwa."
+   "def": "Miejsce w dokumencie, z którego usunięto pismo nożem i pumeksem (łac. radere, skrobać). Prawo kanoniczne wymieniało rasurę wśród pierwszych oznak fałszerstwa.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Transumpt",
@@ -10230,7 +10776,8 @@ window.BIEL_DATA = {
     "transumptu",
     "transumptem"
    ],
-   "def": "Dokument, w którym instytucja mająca własną pieczęć powtarza dosłownie treść starszego dokumentu i poświadcza jego zgodność."
+   "def": "Dokument, w którym instytucja mająca własną pieczęć powtarza dosłownie treść starszego dokumentu i poświadcza jego zgodność.",
+   "group": "Pismo i kancelaria"
   },
   {
    "term": "Dekretały",
@@ -10239,7 +10786,8 @@ window.BIEL_DATA = {
     "dekretałów",
     "dekretałach"
    ],
-   "def": "Zbiór prawa kościelnego ogłoszony w 1234 roku przez papieża Grzegorza IX."
+   "def": "Zbiór prawa kościelnego ogłoszony w 1234 roku przez papieża Grzegorza IX.",
+   "group": "Prawo i miasto"
   },
   {
    "term": "Depozyt",
@@ -10248,7 +10796,8 @@ window.BIEL_DATA = {
     "depozytu",
     "depozytem"
    ],
-   "def": "Rzecz oddana na przechowanie (łac. depositum). Przechowujący nie nabywa jej na własność i musi ją zwrócić."
+   "def": "Rzecz oddana na przechowanie (łac. depositum). Przechowujący nie nabywa jej na własność i musi ją zwrócić.",
+   "group": "Prawo i miasto"
   },
   {
    "term": "Fant",
@@ -10258,7 +10807,8 @@ window.BIEL_DATA = {
     "fantem",
     "fanty"
    ],
-   "def": "Rzecz zajęta dłużnikowi jako zastaw do czasu spłaty albo rozstrzygnięcia sporu (z niem. Pfand, łac. pignus)."
+   "def": "Rzecz zajęta dłużnikowi jako zastaw do czasu spłaty albo rozstrzygnięcia sporu (z niem. Pfand, łac. pignus).",
+   "group": "Prawo i miasto"
   },
   {
    "term": "Ławy chlebowe",
@@ -10268,7 +10818,8 @@ window.BIEL_DATA = {
     "ławach chlebowych",
     "ławami chlebowymi"
    ],
-   "def": "Stragany piekarzy na wrocławskim rynku; w 1273 roku Henryk IV zezwolił mieszczanom na trzydzieści dwie."
+   "def": "Stragany piekarzy na wrocławskim rynku; w 1273 roku Henryk IV zezwolił mieszczanom na trzydzieści dwie.",
+   "group": "Prawo i miasto"
   },
   {
    "term": "Prawo niemieckie",
@@ -10277,7 +10828,8 @@ window.BIEL_DATA = {
     "prawie niemieckim",
     "prawa niemieckiego"
    ],
-   "def": "Zespół zasad, na których zakładano w XIII wieku nowe wsie i miasta: osadnicy dostawali ziemię w dziedziczne użytkowanie za stały czynsz, wsią zarządzał sołtys, a miastem rada i wójt."
+   "def": "Zespół zasad, na których zakładano w XIII wieku nowe wsie i miasta: osadnicy dostawali ziemię w dziedziczne użytkowanie za stały czynsz, wsią zarządzał sołtys, a miastem rada i wójt.",
+   "group": "Prawo i miasto"
   },
   {
    "term": "Szos",
@@ -10286,7 +10838,8 @@ window.BIEL_DATA = {
     "szosu",
     "szosem"
    ],
-   "def": "Podatek miejski od majątku (niem. Schoss), uchwalany przez radę i rozkładany na mieszczan według oszacowania ich dobytku."
+   "def": "Podatek miejski od majątku (niem. Schoss), uchwalany przez radę i rozkładany na mieszczan według oszacowania ich dobytku.",
+   "group": "Prawo i miasto"
   }
  ]
 };
